@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { Instagram, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -52,14 +52,15 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
 
         <Image src={logo} alt="Logo Galopins" className="mt-28 mx-auto" />
 
-        <ul className="flex flex-col gap-4 p-4 font-medium text-md md:text-lg mt-16">
+
+        <ul className="flex flex-col gap-4 p-4 font-semibold text-2xl md:text-lg mt-16">
           {navData.map((link) => (
             <li key={link.name}>
               <Link
                 href={link.href}
                 className={
                   pathname === link.href
-                    ? "border-b-2 border-black font-bold"
+                    ? "border-b-4 border-black font-bold"
                     : ""
                 }
                 onClick={() => setIsOpen(false)}
@@ -69,6 +70,14 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
             </li>
           ))}
         </ul>
+
+        <button
+          className="w-full flex justify-center px-8 md:px-10 py-12"
+          onClick={() => setIsOpen(false)}
+          aria-label="Fermer le menu mobile"
+        >
+          <Instagram className="  h-8 md:h-10 w-8 md:w-10" />
+        </button>
       </nav>
     </>
   );
