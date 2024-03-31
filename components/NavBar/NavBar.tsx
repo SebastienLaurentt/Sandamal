@@ -4,16 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Collab", href: "/collab" },
-  { name: "Paint", href: "/paint" },
-  { name: "Sketch", href: "/sketch" },
-  { name: "Draw", href: "/draw" },
-  { name: "About", href: "/about" },
-  { name: "Store", href: "/store" },
-];
+import navData from "../../data/navData";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -21,13 +12,11 @@ export default function Navbar() {
     <header className="mb-8 border-b">
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
         <Link href="/">
-          <h1 className="text-2xl md:text-4xl font-bold">
-            Sandamal
-          </h1>
+          <h1 className="text-2xl md:text-4xl font-bold">Sandamal</h1>
         </Link>
 
         <nav className="hidden gap-12 lg:flex 2xl:ml-16">
-          {links.map((link, idx) => (
+          {navData.map((link, idx) => (
             <div key={idx}>
               {pathname === link.href ? (
                 <Link
