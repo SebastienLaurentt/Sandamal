@@ -2,7 +2,7 @@ const navData = [
   {
     href: "/",
     name: "Accueil",
-    burgerMenuName: "Accueil",
+    burgerMenuName: "ACCUEIL",
   },
   {
     href: "/collab",
