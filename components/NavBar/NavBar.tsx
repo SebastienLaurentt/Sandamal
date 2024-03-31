@@ -5,9 +5,13 @@ import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import navData from "../../data/navData";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
   return (
     <header className="mb-8 border-b">
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
@@ -48,6 +52,11 @@ export default function Navbar() {
             </span>
           </Button>
         </div>
+
+        <div className="h-8 md:h-10 flex items-center lg:hidden ">
+          <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
+
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
-import logo from "../../../../public/images/logoGalopins.png";
+import logo from "../../public/images/logo.png";
 interface IBurgerMenu {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
