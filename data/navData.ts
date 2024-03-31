@@ -1,8 +1,8 @@
 const navData = [
   {
     href: "/",
-    name: "Accueil",
-    burgerMenuName: "ACCUEIL",
+    name: "Home",
+    burgerMenuName: "HOME",
   },
   {
     href: "/collab",
