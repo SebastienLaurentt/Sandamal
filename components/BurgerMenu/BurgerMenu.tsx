@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
-import navData from "../../../../data/navData";
+import navData from "../../data/navData";
 import logo from "../../../../public/images/logoGalopins.png";
 interface IBurgerMenu {
   isOpen: boolean;
@@ -50,11 +50,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           <X className="  h-8 md:h-10 w-8 md:w-10" />
         </button>
 
-        <Image
-          src={logo}
-          alt="Logo Galopins"
-          className="mt-28 mx-auto"
-        />
+        <Image src={logo} alt="Logo Galopins" className="mt-28 mx-auto" />
 
         <ul className="flex flex-col gap-4 p-4 font-medium text-md md:text-lg mt-16">
           {navData.map((link) => (
