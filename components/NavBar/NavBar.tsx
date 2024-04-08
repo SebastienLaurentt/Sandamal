@@ -14,17 +14,28 @@ export default function Navbar() {
 
   return (
     <header className="absolute  z-10 w-full">
-      <div className="flex items-center justify-between px-6 py-3 md:px-10 xl:mx-auto xl:max-w-screen-xl xl:px-16 text-white">
+      <div className=" flex flex-col lg:flex-row mt-20 lg:mt-0 items-center justify-between px-6 py-3 xl:py-9  xl:mx-auto xl:px-16  text-white">
         <Link href="/">
-          <Image src={logoWhite} alt="Logo Sandamal" />
+          <Image src={logoWhite} alt="Logo Sandamal" height={30} />
         </Link>
 
-        <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+        <span className="text-[40px] xl:text-[30px] mx-auto my-4 xl:hidden">
+          <span className="mr-6">S</span>
+          <span className="mr-6">A</span>
+          <span className="mr-6">N</span>
+          <span className="mr-6">D</span>
+          <span className="mr-6">A</span>
+          <span className="mr-6">M</span>
+          <span className="mr-6">A</span>
+          <span>L</span>
+        </span>
+
+        <nav className="hidden gap-12 uppercase xl:font-extralight lg:flex 2xl:ml-16">
           {navData.map((link, idx) => (
             <div key={idx}>
               {pathname === link.href ? (
                 <Link
-                  className="text-lg font-semibold text-white font-extrabold"
+                  className="hover:border-b-2 hover:border-white tracking-widest"
                   href={link.href}
                 >
                   {link.name}
@@ -32,7 +43,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-lg font-semibold text-white transition duration-100 hover:text-primary"
+                  className="hover:border-b-2 hover:border-white tracking-widest"
                 >
                   {link.name}
                 </Link>
