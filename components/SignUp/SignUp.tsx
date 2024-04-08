@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
-import logoBlack from "../public/images/logoBlack.svg";
+import logoBlack from "../../public/images/logoBlack.svg";
 
 const SignUp = () => {
   return (
