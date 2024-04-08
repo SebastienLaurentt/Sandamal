@@ -15,10 +15,8 @@ export default function Home() {
       <div className="flex flex-col items-center mt-8 lg:mt-20">
         <Image src={logo} alt="logo" className="" />
         <span className="uppercase lg:m-12 lg:text-[20px]">What&apos; s News ? </span>
-        <div className="flex flex-col md:flex-row md:gap-x-4">
-          <Input placeholder="Email Adress" className="w-40 lg:w-80 mt-4 lg:text-xl lg:p-8" />
+          <Input placeholder="Email Adress" className="w-40 mt-4 lg:p-8" />
           <Button className="w-40 mt-4 lg:text-xl lg:p-8">SIGN UP</Button>
-        </div>
       </div>
     </div>
   );
