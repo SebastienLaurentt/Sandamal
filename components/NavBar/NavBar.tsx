@@ -4,8 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import navData from "../../data/navData";
-import logoBlack from "../../public/images/logoBlack.svg";
-import logoWhite from "../../public/images/logoWhite.svg";
 
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
@@ -17,7 +15,7 @@ export default function Navbar() {
   const headerPosition = pathname === "/" ? "absolute" : "";
   const headerTextColor =
     pathname === "/" ? "text-primary-foreground" : "text-foreground";
-  const logoColor = pathname === "/" ? logoWhite : logoBlack;
+  const logoColor = pathname === "/" ? "white" : "black";
 
   return (
     <header className={`${headerPosition} z-10 w-full`}>
