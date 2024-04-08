@@ -6,17 +6,22 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import navData from "../../data/navData";
 import logoWhite from "../../public/images/logoWhite.svg";
+import logoBlack from "../../public/images/logoBlack.svg";
+
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  const headerTextColor = pathname === "/" ? "text-white" : "text-black";
+  const logoColor = pathname === "/" ? logoWhite : logoBlack;
+
   return (
     <header className="absolute z-10 w-full">
-      <div className="mt-12 flex flex-col items-center text-white xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-9">
+      <div className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-9`}>
         <Link href="/">
-          <Image src={logoWhite} alt="Logo Sandamal" height={30} />
+          <Image src={logoColor} alt="Logo Sandamal" height={30} />
         </Link>
 
         <span className="my-3 text-[40px] xl:hidden xl:text-[30px]">
