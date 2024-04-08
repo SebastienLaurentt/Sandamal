@@ -6,7 +6,7 @@ const Sketch = () => {
   return (
     <main>
       <Section>
-        <h2 className="text-[60px] font-bold">Sketch</h2>
+        <h2>Sketch</h2>
         <SignUp />
       </Section>
     </main>

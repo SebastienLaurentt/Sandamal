@@ -6,7 +6,7 @@ const Draw = () => {
   return (
     <main>
       <Section>
-        <h2 className="text-[60px] font-bold">Draw</h2>
+        <h2>Draw</h2>
         <SignUp />
       </Section>
     </main>

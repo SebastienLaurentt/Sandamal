@@ -6,7 +6,7 @@ const Paint = () => {
   return (
     <main>
       <Section>
-        <h2 className="text-[60px] font-bold">paint</h2>
+        <h2>paint</h2>
         <SignUp />
       </Section>
     </main>
