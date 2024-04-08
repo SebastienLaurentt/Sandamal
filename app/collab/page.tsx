@@ -6,7 +6,6 @@ const Collab = () => {
     <main>
       <Section>
         <h2>Collab</h2>
-        <SignUp />
       </Section>
     </main>
   );

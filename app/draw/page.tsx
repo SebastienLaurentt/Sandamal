@@ -6,7 +6,6 @@ const Draw = () => {
     <main>
       <Section>
         <h2>Draw</h2>
-        <SignUp />
       </Section>
     </main>
   );

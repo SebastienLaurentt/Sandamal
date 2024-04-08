@@ -6,7 +6,6 @@ const Paint = () => {
     <main>
       <Section>
         <h2>paint</h2>
-        <SignUp />
       </Section>
     </main>
   );

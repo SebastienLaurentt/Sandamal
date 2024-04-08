@@ -6,7 +6,6 @@ const About = () => {
     <main>
       <Section>
         <h2>About</h2>
-        <SignUp />
       </Section>
     </main>
   );
