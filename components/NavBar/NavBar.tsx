@@ -14,11 +14,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  const headerPosition = pathname === "/" ? "absolute" : "";
   const headerTextColor = pathname === "/" ? "text-white" : "text-black";
   const logoColor = pathname === "/" ? logoWhite : logoBlack;
 
   return (
-    <header className="absolute z-10 w-full">
+    <header className={`${headerPosition} z-10 w-full`}>
       <div className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-9`}>
         <Link href="/">
           <Image src={logoColor} alt="Logo Sandamal" height={30} />
