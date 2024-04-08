@@ -1,4 +1,3 @@
-import SignUp from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 
 const About = () => {
