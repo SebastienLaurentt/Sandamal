@@ -1,11 +1,15 @@
-import React from 'react'
+import Section from "@/components/Section/Section";
+import SignUp from "@/components/SignUp/SignUp";
 
 const Collab = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <main>
+      <Section>
+        <h2 className="text-[60px] font-bold text-black">Collab</h2>
+        <SignUp />
+      </Section>
+    </main>
+  );
+};
 
-export default Collab
+export default Collab;

@@ -1,10 +1,15 @@
+import Section from '@/components/Section/Section'
+import SignUp from '@/components/SignUp/SignUp'
 import React from 'react'
 
 const Paint = () => {
   return (
-    <div>
-      
-    </div>
+    <main>
+      <Section>
+        <h2 className="text-[60px] font-bold text-black">paint</h2>
+        <SignUp />
+      </Section>
+    </main>
   )
 }
 
