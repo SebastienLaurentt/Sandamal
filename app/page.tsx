@@ -8,10 +8,10 @@ import logoBlack from "../public/images/logoBlack.svg";
 export default function Home() {
   return (
     <main>
-      <SectionBg bg={imgHome} minHeightScreen></SectionBg>
-      <div className="mb-20">
-        <div className="flex flex-col items-center mt-8 lg:mt-20">
-          <Image src={logoBlack} alt="logo" className="mt-8" />
+      <SectionBg bg={imgHome} minHeightScreen={true}></SectionBg>
+      <div className="m-8">
+        <div className="flex flex-col items-center lg:mt-20">
+          <Image src={logoBlack} alt="logo" className="" />
           <span className="uppercase lg:m-12 lg:text-[20px] mt-8">
             What&apos; s News ?{" "}
           </span>
