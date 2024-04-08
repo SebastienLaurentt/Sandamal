@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="py-4">
+    <header className="absolute py-4">
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
         <Link href="/">
           <Image src={logo} alt="Logo Sandamal" />
@@ -26,7 +26,7 @@ export default function Navbar() {
             <div key={idx}>
               {pathname === link.href ? (
                 <Link
-                  className="text-lg font-semibold text-primary"
+                  className="text-lg font-semibold text-white font-extrabold"
                   href={link.href}
                 >
                   {link.name}
@@ -34,7 +34,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-primary"
+                  className="text-lg font-semibold text-white transition duration-100 hover:text-primary"
                 >
                   {link.name}
                 </Link>
