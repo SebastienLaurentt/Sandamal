@@ -1,4 +1,4 @@
-import { Instagram, X } from "lucide-react";
+import { Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -30,41 +30,45 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
   return (
     <>
       <button
-        className=""
+        className="font-medium"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
       >
         Menu
       </button>
 
-      <nav
-        className={`flex-col min-h-screen text-black top-0 w-full fixed bg-white text-center transition-all duration-500 ease-in-out  ${
-          isOpen ? "left-0" : "left-full"
+      <div
+        className={`fixed left-0 top-0  flex min-h-screen w-full flex-col items-center bg-white pt-12 text-center text-black transition-all duration-500 ease-in-out  ${
+          isOpen ? "translate-y-0" : "translate-y-full opacity-0"
         }`}
       >
+        <Link href="/">
+          <Image src={logo} alt="Logo Sandamal" height={30} />
+        </Link>
+
+        <span className="my-3 text-[40px] xl:hidden xl:text-[30px]">
+          <span className="mr-4">S</span>
+          <span className="mr-4">A</span>
+          <span className="mr-4">N</span>
+          <span className="mr-4">D</span>
+          <span className="mr-4">A</span>
+          <span className="mr-4">M</span>
+          <span className="mr-4">A</span>
+          <span>L</span>
+        </span>
+
         <button
-          className="w-full flex justify-end px-8 md:px-10 py-4"
+          className=""
           onClick={() => setIsOpen(false)}
           aria-label="Fermer le menu mobile"
         >
-          <X className="  h-8 md:h-10 w-8 md:w-10" />
+          Fermer
         </button>
 
-        <Image src={logo} alt="Logo Galopins" className="mt-28 mx-auto" />
-
-
-        <ul className="flex flex-col gap-6 p-4 font-extralight tracking-[.5em] text-[19px] md:text-lg mt-16">
+        <ul className="mt-16 flex flex-col gap-6 p-4 text-[19px] font-extralight tracking-[.5em] md:text-lg">
           {navData.map((link) => (
             <li key={link.name}>
-              <Link
-                href={link.href}
-                className={
-                  pathname === link.href
-                    ? "border-b-4 border-black font-bold"
-                    : ""
-                }
-                onClick={() => setIsOpen(false)}
-              >
+              <Link href={link.href} onClick={() => setIsOpen(false)}>
                 {link.burgerMenuName}
               </Link>
             </li>
@@ -72,13 +76,13 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         </ul>
 
         <button
-          className="w-full flex justify-center px-8 md:px-10 py-12"
+          className="flex w-full justify-center px-8 py-12 md:px-10"
           onClick={() => setIsOpen(false)}
           aria-label="Fermer le menu mobile"
         >
-          <Instagram className="  h-8 md:h-10 w-8 md:w-10" />
+          <Instagram className="  size-8 md:size-10" />
         </button>
-      </nav>
+      </div>
     </>
   );
 }
