@@ -1,10 +1,9 @@
 import { Instagram } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
-import logo from "../../public/images/logoBlack.svg";
+import SandamalIcon from "../SandamalIcon/SandamalIcon";
 interface IBurgerMenu {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -43,7 +42,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         }`}
       >
         <Link href="/">
-          <Image src={logo} alt="Logo Sandamal" height={30} />
+          <SandamalIcon fillColor="black" />
         </Link>
 
         <span className="my-3 text-[40px] xl:hidden xl:text-[30px]">
