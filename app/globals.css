@@ -48,4 +48,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  body {
+    @apply text-[60px] font-bold;
+  }
 }}
