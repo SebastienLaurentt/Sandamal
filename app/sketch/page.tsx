@@ -1,6 +1,5 @@
-import Section from '@/components/Section/Section'
-import SignUp from '@/components/SignUp/SignUp'
-import React from 'react'
+import SignUp from "@/components/Footer/Footer";
+import Section from "@/components/Section/Section";
 
 const Sketch = () => {
   return (
@@ -10,7 +9,7 @@ const Sketch = () => {
         <SignUp />
       </Section>
     </main>
-  )
-}
+  );
+};
 
-export default Sketch
+export default Sketch;

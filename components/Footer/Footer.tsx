@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import logoBlack from "../../public/images/logoBlack.svg";
 
-const SignUp = () => {
+const Footer = () => {
   return (
     <div className="m-8">
         <div className="flex flex-col items-center lg:mt-20">
@@ -24,4 +24,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default Footer

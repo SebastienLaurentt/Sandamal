@@ -1,5 +1,5 @@
+import SignUp from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
-import SignUp from "@/components/SignUp/SignUp";
 
 const Collab = () => {
   return (

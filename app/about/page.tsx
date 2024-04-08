@@ -1,6 +1,5 @@
-import Section from '@/components/Section/Section'
-import SignUp from '@/components/SignUp/SignUp'
-import React from 'react'
+import SignUp from "@/components/Footer/Footer";
+import Section from "@/components/Section/Section";
 
 const About = () => {
   return (
@@ -10,7 +9,7 @@ const About = () => {
         <SignUp />
       </Section>
     </main>
-  )
-}
+  );
+};
 
-export default About
+export default About;
