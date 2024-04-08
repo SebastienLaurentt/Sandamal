@@ -6,7 +6,7 @@ const Store = () => {
   return (
     <main>
       <Section>
-        <h2 className="text-[60px] font-bold text-black">Store</h2>
+        <h2 className="text-[60px] font-bold">Store</h2>
         <SignUp />
       </Section>
     </main>

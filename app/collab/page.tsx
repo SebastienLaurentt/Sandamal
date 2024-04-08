@@ -5,7 +5,7 @@ const Collab = () => {
   return (
     <main>
       <Section>
-        <h2 className="text-[60px] font-bold text-black">Collab</h2>
+        <h2 className="text-[60px] font-bold">Collab</h2>
         <SignUp />
       </Section>
     </main>

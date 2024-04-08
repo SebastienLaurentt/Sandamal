@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const headerPosition = pathname === "/" ? "absolute" : "";
-  const headerTextColor = pathname === "/" ? "text-white" : "text-black";
+  const headerTextColor = pathname === "/" ? "text-primary-foreground" : "text-foreground";
   const logoColor = pathname === "/" ? logoWhite : logoBlack;
 
   return (
