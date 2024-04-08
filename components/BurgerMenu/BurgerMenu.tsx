@@ -53,7 +53,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         <Image src={logo} alt="Logo Galopins" className="mt-28 mx-auto" />
 
 
-        <ul className="flex flex-col gap-4 p-4 font-semibold text-2xl md:text-lg mt-16">
+        <ul className="flex flex-col gap-6 p-4 font-extralight tracking-[.5em] text-[19px] md:text-lg mt-16">
           {navData.map((link) => (
             <li key={link.name}>
               <Link
