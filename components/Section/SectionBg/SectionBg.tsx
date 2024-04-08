@@ -5,7 +5,6 @@ interface SectionProps {
   className?: string;
   minHeightScreen: boolean;
   bg?: StaticImageData;
-  children: React.ReactNode;
 }
 
 function SectionBg({
@@ -13,7 +12,6 @@ function SectionBg({
   className,
   minHeightScreen,
   bg,
-  children,
 }: SectionProps) {
   const isMinHeightScreen = minHeightScreen
     ? "min-h-screen"
@@ -25,11 +23,10 @@ function SectionBg({
       className={` ${className} ${isMinHeightScreen} relative w-full bg-cover bg-center px-6 md:px-10 xl:px-16`}
       style={{
         backgroundImage: bg
-          ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg.src})`
+          ? `url(${bg.src})`
           : "none",
       }}
     >
-      {children}
     </section>
   );
 }

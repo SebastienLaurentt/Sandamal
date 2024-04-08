@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
-import logo from "../../public/images/logoWhite.svg";
+import logo from "../../public/images/logoBlack.svg";
 interface IBurgerMenu {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -38,7 +38,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
       </button>
 
       <nav
-        className={`flex-col min-h-screen top-0 w-full fixed bg-white text-center transition-all duration-500 ease-in-out  ${
+        className={`flex-col min-h-screen text-black top-0 w-full fixed bg-white text-center transition-all duration-500 ease-in-out  ${
           isOpen ? "left-0" : "left-full"
         }`}
       >

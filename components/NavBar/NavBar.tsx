@@ -1,26 +1,23 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ShoppingBag } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import navData from "../../data/navData";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { useState } from "react";
-import  logoWhite from "../../public/images/logoWhite.svg";
-import Image from "next/image";
+import navData from "../../data/navData";
+import logoWhite from "../../public/images/logoWhite.svg";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <header className="absolute py-4 w-full mx-auto">
-      <div className="flex flex-row items-center justify-center mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl ">
+    <header className="absolute  z-10 w-full">
+      <div className="flex items-center justify-between px-6 py-3 md:px-10 xl:mx-auto xl:max-w-screen-xl xl:px-16 text-white">
         <Link href="/">
           <Image src={logoWhite} alt="Logo Sandamal" />
         </Link>
-        
 
         <nav className="hidden gap-12 lg:flex 2xl:ml-16">
           {navData.map((link, idx) => (
@@ -44,22 +41,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* <div className="flex divide-x border-r sm:border-l">
-          <Button
-            variant={"outline"}
-            className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
-          >
-            <ShoppingBag />
-            <span className="hidden text-xs font-semibold text-gray-500 sm:block">
-              Cart
-            </span>
-          </Button>
-        </div> */}
-
         <div className="h-8 md:h-10 flex items-center lg:hidden ">
           <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-
       </div>
     </header>
   );
