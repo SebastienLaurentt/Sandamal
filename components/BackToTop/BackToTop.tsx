@@ -30,7 +30,7 @@ const BackToTop = () => {
   };
 
   return (
-    <div className="p-8 flex flex-row justify-center">
+    <div className="flex flex-row justify-center p-8">
       <Button
         className={`rounded-xl uppercase outline-none transition-opacity duration-200 md:right-10 xl:right-16   ${
           isVisible ? "opacity-100" : "opacity-0"

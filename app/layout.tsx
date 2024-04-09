@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import BackToTop from "@/components/BackToTop/BackToTop";
 
 const inter = Dosis({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>
