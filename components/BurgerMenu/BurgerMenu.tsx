@@ -29,7 +29,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
   return (
     <>
       <button
-        className="font-medium"
+        className="font-medium uppercase tracking-wider"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
       >
