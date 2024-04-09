@@ -1,26 +1,37 @@
-import SandamalIcon from "../SandamalIcon/SandamalIcon";
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const textColor =
+    pathname === "/" ? "text-secondary-foreground" : "text-foreground";
+  const followMeTextColor =
+    pathname === "/" ? "text-foreground" : "text-secondary-foreground";
+  const followMeButtonColor = pathname === "/" ? "bg-background" : "bg-primary";
+  const emailButtonBorderColor = pathname === "/" ? "border-white" : "border-black";
+
   return (
-    <div
-      className=" p-12"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))`,
-      }}
-    >
+    <div className="  p-12">
       <div className="flex flex-col items-center lg:mt-20">
-        <SandamalIcon fillColor="black" />
-        <span className="mt-8 uppercase lg:m-12 lg:text-[20px]">
-          What&apos; s News ?{" "}
+        <span
+          className={`mt-8 text-[20px] uppercase ${textColor} lg:text-[24px]`}
+        >
+          Keep in touch
         </span>
-        <div className="flex flex-col md:flex-row md:gap-x-4">
+        <div className="flex flex-col md:flex-row md:gap-x-2 ">
           <Input
-            placeholder="Email Adress"
-            className="mt-4 w-40 lg:w-80 lg:p-8 lg:text-xl "
+            placeholder="Email"
+            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor}  bg-transparent`}
           />
-          <Button className="mt-4 w-40 lg:p-8 lg:text-xl">SIGN UP</Button>
+          <Button
+            className={`mt-4 w-40 ${followMeButtonColor} ${followMeTextColor}`}
+          >
+            FOLLOW ME
+          </Button>
         </div>
       </div>
     </div>
