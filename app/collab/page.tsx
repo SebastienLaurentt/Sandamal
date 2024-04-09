@@ -4,7 +4,6 @@ const Collab = () => {
   return (
     <main>
       <Section>
-        <h2>Collab</h2>
       </Section>
     </main>
   );

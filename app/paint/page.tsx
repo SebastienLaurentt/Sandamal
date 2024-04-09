@@ -5,7 +5,6 @@ const Paint = () => {
   return (
     <main>
       <Section>
-        <h2>paint</h2>
         <PaintFetch />
       </Section>
     </main>

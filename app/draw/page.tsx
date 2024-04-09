@@ -4,7 +4,6 @@ const Draw = () => {
   return (
     <main>
       <Section>
-        <h2>Draw</h2>
       </Section>
     </main>
   );
