@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     /* Black */
-    --foreground: 0 0% 3%; 
+    --foreground: 0 0% 3%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -18,10 +18,12 @@
     /* Off White */
     --primary-foreground: 50 12% 90%;
 
-
     --secondary: 210 40% 96.1%;
     /* Off White */
     --secondary-foreground: 50 12% 90%;
+
+    /* Warm Grey */
+    --tertiary-foreground: 51 3% 57%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -39,17 +41,16 @@
     --radius: 0.5rem;
   }
 
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
 
-
-@layer base {
-  * {
-    @apply border-border;
+    h2 {
+      @apply text-[60px] font-bold;
+    }
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  h2 {
-    @apply text-[60px] font-bold;
-  }
-}}
+}
