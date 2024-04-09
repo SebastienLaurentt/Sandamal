@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
@@ -61,7 +61,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           onClick={() => setIsOpen(false)}
           aria-label="Fermer le menu mobile"
         >
-          Fermer
+          <X />
         </button>
 
         <ul className="mt-16 flex flex-col gap-6 p-4 text-[19px] font-extralight tracking-[.5em] md:text-lg">
