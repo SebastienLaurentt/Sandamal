@@ -12,10 +12,10 @@ async function getData() {
 export default async function PaintFetch() {
   const data = await getData();
   return (
-    <div>
+    <div className="flex flex-col gap-x-4 md:flex-row">
       {data.map((paint: any, index: number) => (
-        <div key={index} className="group relative">
-          <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
+        <div key={index} className=" ">
+          <div className="rounded-md   ">
             <Image
               src={urlFor(paint.paintImage).url()}
               alt="Great Photo"
