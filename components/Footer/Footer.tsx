@@ -19,9 +19,9 @@ const Footer = () => {
 
   return (
     <div className="  pb-12">
-      <div className="flex flex-col items-center lg:mt-20">
+      <div className="flex flex-col items-center">
         <span
-          className={`mt-8 text-[20px] uppercase ${textColor} lg:text-[24px]`}
+          className={` text-[20px] uppercase ${textColor} lg:text-[24px]`}
         >
           Keep in touch
         </span>
