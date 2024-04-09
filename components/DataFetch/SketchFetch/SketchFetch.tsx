@@ -17,7 +17,7 @@ export default async function SketchFetch() {
         <div key={index} className=" ">
           <div className="rounded-md   ">
             <Image
-              src={urlFor(sketch.paintImage).url()}
+              src={urlFor(sketch.sketchImage).url()}
               alt="Great Photo"
               className="size-full object-cover object-center"
               priority
