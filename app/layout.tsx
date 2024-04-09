@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <BackToTop />
-        <Footer />
+        {/* <BackToTop /> */}
+        {/* <Footer /> */}
       </body>
     </html>
   );
