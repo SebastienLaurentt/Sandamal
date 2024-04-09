@@ -4,25 +4,9 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      // Show button when page is scrolled down 500px
-      window.scrollY > 500 ? setIsVisible(true) : setIsVisible(false);
-    };
-    // Listen for scroll events
-    window.addEventListener("scroll", toggleVisibility);
-
-    // Clear the listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
 
   // Handle animation to scroll to top
   const scrollToTop = () => {
-    isVisible &&
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -32,10 +16,8 @@ const BackToTop = () => {
   return (
     <div className="flex flex-row justify-center p-8">
       <Button
-      variant={"backToTop"}
-        className={` uppercase text-tertiary-foreground ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
+        variant={"backToTop"}
+        className="uppercase text-tertiary-foreground"
         onClick={scrollToTop}
         aria-label="Retourner en haut de la page"
       >
