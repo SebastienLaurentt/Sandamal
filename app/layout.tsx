@@ -2,8 +2,6 @@ import Navbar from "@/components/NavBar/NavBar";
 import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer/Footer";
-import BackToTop from "@/components/BackToTop/BackToTop";
 
 const inter = Dosis({ subsets: ["latin"] });
 
