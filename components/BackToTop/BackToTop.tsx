@@ -30,15 +30,17 @@ const BackToTop = () => {
   };
 
   return (
-    <Button
-      className={`fixed bottom-6 right-6 rounded-xl uppercase outline-none transition-opacity duration-200 md:right-10 xl:right-16   ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-      onClick={scrollToTop}
-      aria-label="Retourner en haut de la page"
-    >
-      Back To Top
-    </Button>
+    <div className="p-8 flex flex-row justify-center">
+      <Button
+        className={`rounded-xl uppercase outline-none transition-opacity duration-200 md:right-10 xl:right-16   ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={scrollToTop}
+        aria-label="Retourner en haut de la page"
+      >
+        Back To Top
+      </Button>
+    </div>
   );
 };
 
