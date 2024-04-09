@@ -9,7 +9,7 @@ async function getData() {
   return data;
 }
 
-export default async function SketchFunction() {
+export default async function SketchFetch() {
   const data = await getData();
   return (
     <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-4 ">
