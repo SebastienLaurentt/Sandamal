@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const ScrollToTopButton = () => {
@@ -32,13 +31,13 @@ const ScrollToTopButton = () => {
 
   return (
     <Button
-      className={`fixed bottom-6 right-6 rounded-xl outline-none transition-opacity duration-200 md:right-10 xl:right-16   ${
+      className={`fixed bottom-6 right-6 rounded-xl uppercase outline-none transition-opacity duration-200 md:right-10 xl:right-16   ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       onClick={scrollToTop}
       aria-label="Retourner en haut de la page"
     >
-      <ChevronUp />
+      Back To Top
     </Button>
   );
 };
