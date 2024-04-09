@@ -9,10 +9,13 @@ const Footer = () => {
 
   const textColor =
     pathname === "/" ? "text-secondary-foreground" : "text-foreground";
+  const placeHolderTextButton =
+    pathname === "/" ? "placeholder:text-secondary-foreground" : "placeholder:text-foreground";
   const followMeTextColor =
     pathname === "/" ? "text-foreground" : "text-secondary-foreground";
   const followMeButtonColor = pathname === "/" ? "bg-background" : "bg-primary";
-  const emailButtonBorderColor = pathname === "/" ? "border-white" : "border-black";
+  const emailButtonBorderColor =
+    pathname === "/" ? "border-white" : "border-black";
 
   return (
     <div className="  p-12">
@@ -25,7 +28,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:gap-x-2 ">
           <Input
             placeholder="Email"
-            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor}  bg-transparent`}
+            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor} ${placeHolderTextButton} bg-transparent`}
           />
           <Button
             className={`mt-4 w-40 ${followMeButtonColor} ${followMeTextColor}`}
