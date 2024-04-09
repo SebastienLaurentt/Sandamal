@@ -6,6 +6,7 @@ const Paint = () => {
     <main>
       <Section>
         <PaintFetch />
+        <back
       </Section>
     </main>
   );
