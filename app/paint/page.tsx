@@ -9,6 +9,7 @@ const Paint = () => {
       <Section>
         <PaintFetch />
       </Section>
+      <BackToTop />
       <Footer />
     </main>
   );
