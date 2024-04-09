@@ -33,7 +33,7 @@ const BackToTop = () => {
     <div className="flex flex-row justify-center p-8">
       <Button
       variant={"backToTop"}
-        className={` uppercase font-me ${
+        className={` uppercase text-tertiary-foreground ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         onClick={scrollToTop}
