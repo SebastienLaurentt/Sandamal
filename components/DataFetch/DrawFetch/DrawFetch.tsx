@@ -17,7 +17,7 @@ export default async function DrawFetch() {
         <div key={index} className=" ">
           <div className="rounded-md   ">
             <Image
-              src={urlFor(draw.paintImage).url()}
+              src={urlFor(draw.drawImage).url()}
               alt="Great Photo"
               className="size-full object-cover object-center"
               priority
