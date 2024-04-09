@@ -17,7 +17,7 @@ export default async function CollabFetch() {
         <div key={index} className=" ">
           <div className="rounded-md   ">
             <Image
-              src={urlFor(collab.paintImage).url()}
+              src={urlFor(collab.collabImage).url()}
               alt="Great Photo"
               className="size-full object-cover object-center"
               priority
