@@ -21,7 +21,7 @@ const Footer = () => {
     <div className="  pb-12">
       <div className="flex flex-col items-center">
         <span
-          className={` text-[20px] uppercase ${textColor} lg:text-[24px]`}
+          className={` text-[20px] uppercase ${textColor} lg:text-[40px]`}
         >
           Keep in touch
         </span>

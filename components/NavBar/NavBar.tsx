@@ -26,14 +26,14 @@ export default function Navbar() {
           <SandamalIcon fillColor={logoColor} />
         </Link>
 
-        <span className="my-3 text-[40px] xl:hidden xl:text-[30px]">
-          <span className="mr-4">S</span>
-          <span className="mr-4">A</span>
-          <span className="mr-4">N</span>
-          <span className="mr-4">D</span>
-          <span className="mr-4">A</span>
-          <span className="mr-4">M</span>
-          <span className="mr-4">A</span>
+        <span className="my-3 text-[40px] lg:text-[64px] xl:hidden">
+          <span className="mr-4 lg:mr-6">S</span>
+          <span className="mr-4 lg:mr-6">A</span>
+          <span className="mr-4 lg:mr-6">N</span>
+          <span className="mr-4 lg:mr-6">D</span>
+          <span className="mr-4 lg:mr-6">A</span>
+          <span className="mr-4 lg:mr-6">M</span>
+          <span className="mr-4 lg:mr-6">A</span>
           <span>L</span>
         </span>
 

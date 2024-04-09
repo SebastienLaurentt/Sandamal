@@ -29,7 +29,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
   return (
     <>
       <button
-        className="font-medium uppercase tracking-wider"
+        className="font-medium uppercase tracking-wider lg:text-xl"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
       >
@@ -38,7 +38,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
 
       <div
         className={`fixed left-0 top-0  flex min-h-screen w-full flex-col items-center bg-white pt-12 text-center text-black transition-all duration-500 ease-in-out  ${
-          isOpen ? "translate-y-0" : "translate-y-full opacity-0"
+          isOpen ? "opacity-100" : "hidden opacity-0"
         }`}
       >
         <Link href="/">
