@@ -20,7 +20,7 @@ const Footer = () => {
     pathname === "/" ? "border-white" : "border-black";
 
   return (
-    <div className="  pb-16">
+    <div className="  pb-20">
       <div className="flex flex-col items-center">
         <span className={` text-[20px] uppercase ${textColor} lg:text-[40px]`}>
           Keep in touch
@@ -36,8 +36,10 @@ const Footer = () => {
             FOLLOW ME
           </Button>
         </div>
-        <div className="pt-4">
-          <p className={`${textColor} text-md`}>
+        <div className="flex flex-row pt-4">
+          <p
+            className={`${textColor} max-w-[200px] text-center text-[16px] xl:max-w-[300px] xl:text-[20px]`}
+          >
             My name is Sandamal and I want to create my own universe.
           </p>
         </div>
