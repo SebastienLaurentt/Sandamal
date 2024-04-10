@@ -10,7 +10,9 @@ const Footer = () => {
   const textColor =
     pathname === "/" ? "text-secondary-foreground" : "text-foreground";
   const placeHolderTextButton =
-    pathname === "/" ? "placeholder:text-secondary-foreground" : "placeholder:text-foreground";
+    pathname === "/"
+      ? "placeholder:text-secondary-foreground"
+      : "placeholder:text-foreground";
   const followMeTextColor =
     pathname === "/" ? "text-foreground" : "text-secondary-foreground";
   const followMeButtonColor = pathname === "/" ? "bg-background" : "bg-primary";
@@ -18,11 +20,9 @@ const Footer = () => {
     pathname === "/" ? "border-white" : "border-black";
 
   return (
-    <div className="  pb-20">
+    <div className="  pb-16">
       <div className="flex flex-col items-center">
-        <span
-          className={` text-[20px] uppercase ${textColor} lg:text-[40px]`}
-        >
+        <span className={` text-[20px] uppercase ${textColor} lg:text-[40px]`}>
           Keep in touch
         </span>
         <div className="flex flex-col md:flex-row md:gap-x-2 ">
@@ -35,6 +35,11 @@ const Footer = () => {
           >
             FOLLOW ME
           </Button>
+        </div>
+        <div className="pt-4">
+          <p className={`${textColor} text-md`}>
+            My name is Sandamal and I want to create my own universe.
+          </p>
         </div>
       </div>
     </div>
