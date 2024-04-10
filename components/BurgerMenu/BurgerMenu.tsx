@@ -79,7 +79,9 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           onClick={() => setIsOpen(false)}
           aria-label="Fermer le menu mobile"
         >
-          <Instagram className="  size-8 md:size-10" />
+          <Link href="https://www.instagram.com/sandamalju" target="_blank">
+            <Instagram className="  size-8 md:size-10" />
+          </Link>
         </button>
       </div>
     </>
