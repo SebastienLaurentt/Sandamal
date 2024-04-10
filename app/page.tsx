@@ -12,13 +12,6 @@ export default function Home() {
         className="absolute -z-50 size-full object-cover"
       >
         <source src={require("../public/videos/Lilith.mp4")} type="video/mp4" />
-        <track
-          src={require("../public/videos/Lilith.mp4")}
-          kind="subtitles"
-          srcLang="en"
-          label="English"
-        />
-        Your browser does not support the video tag.
       </video>
       {/* <video
         src={require("../public/videos/Lilith.mp4")}
