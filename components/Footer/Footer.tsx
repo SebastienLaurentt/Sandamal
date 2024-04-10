@@ -38,9 +38,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-row pt-4">
           <p
-            className={`${textColor} max-w-[200px] text-center text-[16px] xl:max-w-[300px] xl:text-[20px]`}
+            className={`${textColor} max-w-[200px] text-center text-[14px] leading-5 xl:max-w-[300px] xl:text-[20px] xl:leading-6`}
           >
-            My name is Sandamal and I want to create my own universe.
+            By the way, my name is Sandamal. Welcome to my lands.
           </p>
         </div>
       </div>
