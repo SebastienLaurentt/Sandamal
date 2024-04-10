@@ -4,6 +4,7 @@ const About = () => {
   return (
     <main>
       <Section>
+        <p>Yooo le s </p>
       </Section>
     </main>
   );

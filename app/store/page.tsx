@@ -4,6 +4,7 @@ const Store = () => {
   return (
     <main>
       <Section>
+      <p>Yooo le h </p>
       </Section>
     </main>
   );
