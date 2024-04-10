@@ -18,7 +18,7 @@ const Footer = () => {
     pathname === "/" ? "border-white" : "border-black";
 
   return (
-    <div className="  pb-12">
+    <div className="  pb-20">
       <div className="flex flex-col items-center">
         <span
           className={` text-[20px] uppercase ${textColor} lg:text-[40px]`}
