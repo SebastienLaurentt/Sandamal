@@ -10,6 +10,7 @@ export default function Home() {
         preload="yes"
         autoPlay
         loop
+        muted
         className="absolute -z-50 size-full object-cover"
       >
         <source src="../videos/Lilith.mp4" type="video/mp4" />
