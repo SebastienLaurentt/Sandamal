@@ -20,30 +20,34 @@ export default function Navbar() {
   return (
     <header className={`${headerPosition} z-10 w-full`}>
       <div
-        className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-9`}
+        className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
       >
-        <Link href="/">
-          <SandamalIcon fillColor={logoColor} />
-        </Link>
+        <div className="flex flex-col xl:flex-row items-center gap-x-6">
+          <Link href="/">
+            <SandamalIcon fillColor={logoColor} />
+          </Link>
 
-        <span className="my-3 text-[40px] lg:text-[64px] xl:hidden">
-          <span className="mr-4 lg:mr-6">S</span>
-          <span className="mr-4 lg:mr-6">A</span>
-          <span className="mr-4 lg:mr-6">N</span>
-          <span className="mr-4 lg:mr-6">D</span>
-          <span className="mr-4 lg:mr-6">A</span>
-          <span className="mr-4 lg:mr-6">M</span>
-          <span className="mr-4 lg:mr-6">A</span>
-          <span>L</span>
-        </span>
+          <span className="my-3 xl:my-0 text-[40px] lg:text-[64px] xl:text-[40px]">
+            <span className="mr-4 lg:mr-6 xl:mr-2">S</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">A</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">N</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">D</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">A</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">M</span>
+            <span className="mr-4 lg:mr-6 xl:mr-2">A</span>
+            <span>L</span>
+          </span>
+        </div>
 
         <nav className="hidden xl:block ">
-          <ul className="gap-12 uppercase xl:flex xl:font-extralight">
+          <ul className="gap-4 uppercase xl:flex xl:font-extralight">
             {navData.map((link, idx) => (
               <li key={idx}>
                 <Link
                   href={link.href}
-                  className={"" + (pathname === link.href ? "" : "")}
+                  className={
+                    "hover:font-bold" + (pathname === link.href ? "" : "")
+                  }
                 >
                   {link.name}
                 </Link>
