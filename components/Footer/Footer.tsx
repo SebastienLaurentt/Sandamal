@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:gap-x-2 ">
           <Input
             placeholder="Email"
-            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor} ${placeHolderTextButton} bg-transparent`}
+            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor} ${textColor} ${placeHolderTextButton} bg-transparent`}
           />
           <Button
             className={`mt-4 w-40 ${followMeButtonColor} ${followMeTextColor}`}
