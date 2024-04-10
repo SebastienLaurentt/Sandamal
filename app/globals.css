@@ -16,11 +16,11 @@
 
     --primary: 222.2 47.4% 11.2%;
     /* Off White */
-    --primary-foreground: 50 12% 90%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     /* Off White */
-    --secondary-foreground: 50 12% 90%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Warm Grey */
     --tertiary-foreground: 51 3% 57%;
