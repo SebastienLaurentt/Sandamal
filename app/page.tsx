@@ -16,14 +16,6 @@ export default function Home() {
       >
         <source src="../videos/Lilith.mp4" type="video/mp4" />
       </video>
-      {/* <video
-        src={require("../public/videos/Lilith.mp4")}
-        autoPlay
-        muted
-        loop
-        className="absolute -z-50 size-full object-cover"
-        style={{ minHeight: "100vh" }}
-      ></video> */}
     </main>
   );
 }
