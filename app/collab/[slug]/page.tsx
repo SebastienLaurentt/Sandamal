@@ -1,7 +1,6 @@
-import { simplifiedCollab } from '@/app/interface';
-import { client } from '@/app/lib/sanity';
-import React from 'react'
-
+import { simplifiedCollab } from "@/app/interface";
+import { client } from "@/app/lib/sanity";
+import Section from "@/components/Section/Section";
 
 async function getData(slug: string) {
   const query = `*[_type == "collab" && slug.current == "${slug}"][0] {
@@ -18,16 +17,15 @@ async function getData(slug: string) {
 
 export const dynamic = "force-dynamic";
 
-export default async function CollabPage ({
+export default async function CollabPage({
   params,
 }: {
   params: { slug: string };
 }) {
   const data: simplifiedCollab = await getData(params.slug);
   return (
-  <h2 className="">
-    {data.name}
-  </h2>
-  )
+    <Section>
+      <h2 className="">{data.name}</h2>
+    </Section>
+  );
 }
-
