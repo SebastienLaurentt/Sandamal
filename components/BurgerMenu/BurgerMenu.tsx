@@ -1,10 +1,8 @@
 import { Instagram, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
-
 
 interface IBurgerMenu {
   isOpen: boolean;
@@ -12,8 +10,6 @@ interface IBurgerMenu {
 }
 
 export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
-  const pathname = usePathname();
-
   useEffect(() => {
     // Désactiver le défilement de la page principale lorsque le menu est ouvert
     if (isOpen) {
