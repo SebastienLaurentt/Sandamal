@@ -21,6 +21,21 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        xxs: "8px",
+        xs: "12px",
+        sm: "16px",
+        md: "20px",
+        lg: "24px",
+        "xl": "28px",
+        "2xl": "32px",
+        "3xl": "40px",
+        "4xl": "48px",
+        "5xl": "56px",
+        "6xl": "64px",
+        "7xl": "72px",
+        "8xl": "80px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
