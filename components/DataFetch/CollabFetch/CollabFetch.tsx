@@ -1,6 +1,5 @@
 import { simplifiedCollab } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
-import Section from "@/components/Section/Section";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,11 +19,7 @@ async function getData() {
 export default async function CollabFetch() {
   const data: simplifiedCollab[] = await getData();
   return (
-    <Section
-      classname="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4"
-      marginTop={true}
-      marginBottom={true}
-    >
+    <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4">
       {data.map((collab: any, index: number) => (
         <div key={index} className=" ">
           <Link href={`/collab/${collab.slug}`}>
@@ -41,6 +36,6 @@ export default async function CollabFetch() {
           </Link>
         </div>
       ))}
-    </Section>
+    </div>
   );
 }
