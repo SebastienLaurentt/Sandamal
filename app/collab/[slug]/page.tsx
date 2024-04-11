@@ -25,7 +25,7 @@ export default async function CollabPage ({
 }) {
   const data: simplifiedCollab = await getData(params.slug);
   return (
-  <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
+  <h2 className="">
     {data.name}
   </h2>
   )
