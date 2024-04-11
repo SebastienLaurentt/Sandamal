@@ -14,8 +14,8 @@ export default async function PaintFetch() {
   return (
     <div className="flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:grid-cols-5">
       {data.map((paint: any, index: number) => (
-        <div key={index} className=" ">
-          <div className="rounded-md   ">
+        <div key={index}>
+          <div>
             <Image
               src={urlFor(paint.paintImage).url()}
               alt="Great Photo"

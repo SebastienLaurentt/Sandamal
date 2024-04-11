@@ -14,8 +14,8 @@ export default async function DrawFetch() {
   return (
     <div className="flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-2 lg:gap-4 xl:grid-cols-5">
       {data.map((draw: any, index: number) => (
-        <div key={index} className=" ">
-          <div className="rounded-md   ">
+        <div key={index}>
+          <div>
             <Image
               src={urlFor(draw.drawImage).url()}
               alt="Great Photo"

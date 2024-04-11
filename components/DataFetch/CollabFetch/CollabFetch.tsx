@@ -21,9 +21,9 @@ export default async function CollabFetch() {
   return (
     <div className="flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-2 lg:gap-4 xl:grid-cols-5">
       {data.map((collab: any, index: number) => (
-        <div key={index} className=" ">
+        <div key={index}>
           <Link href={`/collab/${collab.slug}`}>
-            <div className="rounded-md">
+            <div>
               <Image
                 src={collab.imageUrl}
                 alt="Great Photo"
