@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
+
+
 interface IBurgerMenu {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -77,7 +79,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         <button
           className="flex w-full justify-center px-8 py-12 md:px-10"
           onClick={() => setIsOpen(false)}
-          aria-label="Fermer le menu mobile"
+          aria-label="Allez à la page Instagram de Sandamal"
         >
           <Link href="https://www.instagram.com/sandamalju" target="_blank">
             <Instagram className="  size-8 md:size-10" />
