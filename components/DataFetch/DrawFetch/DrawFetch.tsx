@@ -12,7 +12,7 @@ async function getData() {
 export default async function DrawFetch() {
   const data = await getData();
   return (
-    <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4">
+    <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:grid-cols-5">
       {data.map((draw: any, index: number) => (
         <div key={index} className=" ">
           <div className="rounded-md   ">
