@@ -6,7 +6,7 @@ import Section from "@/components/Section/Section";
 const Paint = () => {
   return (
     <main>
-      <Section>
+      <Section marginTop={true} marginBottom={true}>
         <PaintFetch />
       </Section>
       <BackToTop />

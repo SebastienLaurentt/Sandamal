@@ -6,7 +6,7 @@ import Section from "@/components/Section/Section";
 const Collab = () => {
   return (
     <main>
-      <Section>
+      <Section marginTop={true} marginBottom={true}>
         <CollabFetch />
       </Section>
       <BackToTop />
