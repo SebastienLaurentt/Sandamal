@@ -1,4 +1,5 @@
 import { client, urlFor } from "@/app/lib/sanity";
+import Section from "@/components/Section/Section";
 import Image from "next/image";
 
 async function getData() {
@@ -12,7 +13,11 @@ async function getData() {
 export default async function SketchFetch() {
   const data = await getData();
   return (
-    <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 md:px-4 lg:grid-cols-3 xl:grid-cols-5 lg:gap-4 lg:px-6  xl:px-8">
+    <Section
+      classname="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4"
+      marginTop={true}
+      marginBottom={true}
+    >
       {data.map((sketch: any, index: number) => (
         <div key={index} className=" ">
           <div className="rounded-md   ">
@@ -27,6 +32,6 @@ export default async function SketchFetch() {
           </div>
         </div>
       ))}
-    </div>
+    </Section>
   );
 }
