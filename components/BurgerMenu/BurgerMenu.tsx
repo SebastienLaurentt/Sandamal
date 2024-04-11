@@ -27,7 +27,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
   return (
     <>
       <button
-        className="font-medium uppercase tracking-wider lg:text-xl"
+        className="font-medium uppercase tracking-wider  lg:text-xl"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
       >
@@ -43,7 +43,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           <SandamalIcon fillColor="black" />
         </Link>
 
-        <span className="my-3 text-[40px] xl:hidden xl:text-[30px]">
+        <span className="my-3 text-3xl xl:hidden xl:text-xl">
           <span className="mr-4">S</span>
           <span className="mr-4">A</span>
           <span className="mr-4">N</span>
@@ -62,7 +62,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           <X />
         </button>
 
-        <ul className="mt-16 flex flex-col gap-6 p-4 text-[19px] font-extralight tracking-[.5em] md:text-lg">
+        <ul className="mt-16 flex flex-col gap-6 p-4 text-md font-extralight tracking-[.5em] md:text-lg">
           {navData.map((link) => (
             <li key={link.name}>
               <Link href={link.href} onClick={() => setIsOpen(false)}>
