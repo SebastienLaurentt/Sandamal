@@ -4,9 +4,22 @@ export default {
   title: 'Collab',
   fields: [
     {
-      name: 'collabImage',
-      title: 'Image',
+      name: 'name',
+      type: 'string',
+      title: 'Name of Collab',
+    },
+    {
+      name: 'collabMainImage',
+      title: 'Main Image',
       type: 'image',
+    },
+    {
+      name: 'slug',
+      type: 'slug',
+      title: 'Product Slug',
+      options: {
+        source: 'name',
+      },
     },
   ],
 }
