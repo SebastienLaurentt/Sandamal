@@ -43,26 +43,25 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           <SandamalIcon fillColor="black" />
         </Link>
 
-        <span className="my-3 text-3xl xl:hidden xl:text-xl">
-          <span className="mr-4">S</span>
-          <span className="mr-4">A</span>
-          <span className="mr-4">N</span>
-          <span className="mr-4">D</span>
-          <span className="mr-4">A</span>
-          <span className="mr-4">M</span>
-          <span className="mr-4">A</span>
+        <span className="my-3 text-3xl lg:text-6xl xl:hidden xl:text-xl">
+          <span className="mr-4 lg:mr-6">S</span>
+          <span className="mr-4 lg:mr-6">A</span>
+          <span className="mr-4 lg:mr-6">N</span>
+          <span className="mr-4 lg:mr-6">D</span>
+          <span className="mr-4 lg:mr-6">A</span>
+          <span className="mr-4 lg:mr-6">M</span>
+          <span className="mr-4 lg:mr-6">A</span>
           <span>L</span>
         </span>
 
         <button
-          className=""
           onClick={() => setIsOpen(false)}
           aria-label="Fermer le menu mobile"
         >
-          <X />
+          <X className="lg:size-10" />
         </button>
 
-        <ul className="mt-16 flex flex-col gap-6 p-4 text-md font-extralight tracking-[.5em] md:text-lg">
+        <ul className="mt-16 flex flex-col gap-6 p-4 text-md font-extralight tracking-[.5em] md:text-lg lg:mt-20 lg:gap-8 lg:text-xl">
           {navData.map((link) => (
             <li key={link.name}>
               <Link href={link.href} onClick={() => setIsOpen(false)}>
@@ -73,12 +72,12 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         </ul>
 
         <button
-          className="flex w-full justify-center px-8 py-12 md:px-10"
+          className="mt-16 flex w-full justify-center lg:mt-20"
           onClick={() => setIsOpen(false)}
           aria-label="Allez à la page Instagram de Sandamal"
         >
           <Link href="https://www.instagram.com/sandamalju" target="_blank">
-            <Instagram className="  size-8 md:size-10" />
+            <Instagram className="  size-8 md:size-10 lg:size-12" />
           </Link>
         </button>
       </div>
