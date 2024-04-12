@@ -1,6 +1,3 @@
-import Footer from "@/components/Footer/Footer";
-
-
 export default function Home() {
   return (
     <main className="flex h-screen items-end justify-center ">
@@ -10,7 +7,7 @@ export default function Home() {
         autoPlay
         loop
         muted
-        className="absolute -z-50  object-cover"
+        className="absolute -z-50 size-full object-cover"
         style={{ minHeight: "100vh" }}
       >
         <source src="../videos/Lilith.mp4" type="video/mp4" />
