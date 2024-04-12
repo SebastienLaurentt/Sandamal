@@ -1,6 +1,4 @@
-import BackToTop from "@/components/BackToTop/BackToTop";
 import DrawFetch from "@/components/DataFetch/DrawFetch/DrawFetch";
-import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 
 const Draw = () => {
@@ -9,7 +7,6 @@ const Draw = () => {
       <Section marginTop={true} marginBottom={true}>
         <DrawFetch />
       </Section>
-      <BackToTop />
     </main>
   );
 };
