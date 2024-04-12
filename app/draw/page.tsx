@@ -10,7 +10,6 @@ const Draw = () => {
         <DrawFetch />
       </Section>
       <BackToTop />
-      <Footer />
     </main>
   );
 };

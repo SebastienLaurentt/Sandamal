@@ -10,7 +10,6 @@ const Sketch = () => {
         <SketchFetch />
       </Section>
       <BackToTop />
-      <Footer />
     </main>
   );
 };

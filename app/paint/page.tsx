@@ -10,7 +10,6 @@ const Paint = () => {
         <PaintFetch />
       </Section>
       <BackToTop />
-      <Footer />
     </main>
   );
 };
