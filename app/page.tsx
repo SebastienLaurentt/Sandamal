@@ -3,7 +3,7 @@ import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <main className="flex h-screen items-end justify-center ">
+    <main className="flex max-h-screen min-h-screen items-end justify-center ">
       {/* <SectionBg bg={imgHome} minHeightScreen={true}></SectionBg> */}
       <Footer />
       <video
@@ -12,7 +12,6 @@ export default function Home() {
         loop
         muted
         className="absolute -z-50 size-full object-cover"
-        style={{ minHeight: "100vh" }}
       >
         <source src="../videos/Lilith.mp4" type="video/mp4" />
       </video>
