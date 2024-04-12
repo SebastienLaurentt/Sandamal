@@ -22,7 +22,7 @@ const Footer = () => {
     pathname === "/" ? "xl:hover:bg-transparent xl:hover:text-white" : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
   return (
-    <div className="  pb-20 xl:pb-12">
+    <footer className="pb-20 xl:pb-12">
       <div className="flex flex-col items-center">
         <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch
@@ -46,7 +46,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
