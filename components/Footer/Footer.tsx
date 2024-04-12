@@ -7,7 +7,7 @@ import { Input } from "../ui/input";
 const Footer = () => {
   const pathname = usePathname();
 
-  const footerPosition = pathname === "/" ? "pb-20 xl:pb-12" : "pb-12";
+  const footerPosition = pathname === "/" ? "absolute bottom-0" : "";
   const textColor =
     pathname === "/" ? "text-secondary-foreground" : "text-foreground";
   const emailButtonBorderColor =
@@ -20,10 +20,12 @@ const Footer = () => {
     pathname === "/" ? "text-foreground" : "text-secondary-foreground";
   const followMeBgColor = pathname === "/" ? "bg-background" : "bg-primary";
   const followMeHover =
-    pathname === "/" ? "xl:hover:bg-transparent xl:hover:text-white" : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
+    pathname === "/"
+      ? "xl:hover:bg-transparent xl:hover:text-white"
+      : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
   return (
-    <footer className={`${footerPosition}`}>
+    <footer className={`${footerPosition} mx-auto w-full p-12`}>
       <div className="flex flex-col items-center">
         <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch

@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <main className="flex h-screen items-end justify-center ">
       {/* <SectionBg bg={imgHome} minHeightScreen={true}></SectionBg> */}
-      <Footer />
       <video
         preload="yes"
         autoPlay

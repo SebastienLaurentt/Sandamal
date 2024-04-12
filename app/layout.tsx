@@ -2,6 +2,7 @@ import Navbar from "@/components/NavBar/NavBar";
 import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Dosis({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
