@@ -7,6 +7,7 @@ import { Input } from "../ui/input";
 const Footer = () => {
   const pathname = usePathname();
 
+  const footerPosition = pathname === "/" ? "pb-20 xl:pb-12" : "pb-12";
   const textColor =
     pathname === "/" ? "text-secondary-foreground" : "text-foreground";
   const emailButtonBorderColor =
@@ -22,7 +23,7 @@ const Footer = () => {
     pathname === "/" ? "xl:hover:bg-transparent xl:hover:text-white" : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
   return (
-    <footer className="pb-20 xl:pb-12">
+    <footer className={`${footerPosition}`}>
       <div className="flex flex-col items-center">
         <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch
