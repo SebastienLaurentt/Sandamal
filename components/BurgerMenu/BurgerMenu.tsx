@@ -35,7 +35,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
       </button>
 
       <div
-        className={`fixed left-0 top-0  flex min-h-screen w-full flex-col justify-between bg-white py-12 text-center text-black transition-all duration-500 ease-in-out  ${
+        className={`fixed left-0 top-0  flex min-h-screen w-full flex-col justify-between bg-white pt-12 pb-24 text-center text-black transition-all duration-500 ease-in-out  ${
           isOpen ? "opacity-100" : "hidden opacity-0"
         }`}
       >
