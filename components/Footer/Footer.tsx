@@ -19,7 +19,7 @@ const Footer = () => {
     pathname === "/" ? "text-foreground" : "text-secondary-foreground";
   const followMeBgColor = pathname === "/" ? "bg-background" : "bg-primary";
   const followMeHover =
-    pathname === "/" ? "hover:bg-transparent hover:text-white" : "hover:bg-background hover:text-foreground hover:border-2 hover:border-black";
+    pathname === "/" ? "xl:hover:bg-transparent xl:hover:text-white" : "hover:bg-background hover:text-foreground hover:border-2 hover:border-black";
 
   return (
     <div className="  pb-20 xl:pb-12">
