@@ -25,7 +25,7 @@ const Footer = () => {
       : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
   return (
-    <footer className={`${footerPosition} mx-auto w-full p-12`}>
+    <footer className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}>
       <div className="flex flex-col items-center">
         <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch
