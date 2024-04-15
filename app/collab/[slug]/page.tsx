@@ -64,10 +64,10 @@ export default async function CollabPage({
         <Image
           src={LogoSihinW}
           alt="Sihin"
-          className="size-48 md:size-64 lg:size-80 xl:size-96"
+          className="size-36 md:size-64 lg:size-80 xl:size-96"
         />
       </div>
-      <div className="flex flex-row justify-center bg-white py-16">
+      <div className="flex flex-row justify-center bg-white pb-16">
         <Image src={Logo} alt="Sihin" className="" />
       </div>
     </>
