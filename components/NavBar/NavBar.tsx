@@ -12,10 +12,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const headerPosition = pathname === "/" ? "absolute" : "";
+  const headerPosition = pathname === "/" || pathname.startsWith("/collab/") ? "absolute" : "";
   const headerTextColor =
-    pathname === "/" ? "text-primary-foreground" : "text-foreground";
-  const logoColor = pathname === "/" ? "white" : "black";
+    pathname === "/" || pathname.startsWith("/collab/") ? "text-primary-foreground" : "text-foreground";
+  const logoColor = pathname === "/" || pathname.startsWith("/collab/") ? "white" : "black";
 
   return (
     <header className={`${headerPosition} z-10 w-full`}>
