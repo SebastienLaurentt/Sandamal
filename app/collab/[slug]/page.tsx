@@ -1,7 +1,7 @@
 import { simplifiedCollab } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import Image from "next/image";
-import Logo from "../../../public/images/Logo.jpg";
+import Logo from "../../../public/images/logo.jpg";
 import LogoSihinW from "../../../public/images/LogoSihinW.jpg";
 import VynilUnfolded from "../../../public/images/VynilUnfolded.jpg";
 import Int01 from "../../../public/images/int01.jpg";
