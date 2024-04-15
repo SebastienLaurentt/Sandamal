@@ -48,8 +48,8 @@ export default async function CollabPage({
         </div>
 
         <div className=" mx-auto flex  w-full flex-col gap-x-14 p-8 md:flex-row">
-          <Image src={VynilFront} alt="Sihin" className="" />
-          <Image src={Vynil} alt="Sihin" className="" />
+          <Image src={VynilFront} alt="Sihin"  />
+          <Image src={Vynil} alt="Sihin" />
         </div>
         <div className="px-0">
           <Image src={VynilUnfolded} alt="Sihin" className="2xl:w-full" />
