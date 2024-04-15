@@ -35,7 +35,7 @@ export default async function CollabPage({
   return (
     <>
       <div className="sihin text-center">
-        <div className="pt-60  xl:pt-40">
+        <div className="pt-60 lg:pt-80  xl:pt-40">
           <h2 className=" text-white">{data.name}</h2>
           <p className="mx-auto max-w-[360px] text-md md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] ">
             I had the privilege of crafting the artistic ensemble for the vinyl
