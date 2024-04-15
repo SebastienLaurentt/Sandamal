@@ -46,12 +46,11 @@ export default async function CollabPage({
             Explore a glimpse of my work for this unique collaboration.
           </p>
         </div>
-
-        <div className=" mx-auto flex  w-full flex-col gap-x-14 p-8 md:flex-row">
+        <div className="flex w-full flex-col gap-y-4 p-8 md:flex-row md:justify-center md:gap-x-8 md:gap-y-0 xl:md:gap-x-14">
           <Image src={VynilFront} alt="Sihin" />
           <Image src={Vynil} alt="Sihin" />
         </div>
-        <div className="px-0">
+        <div className="px-0 py-4 md:py-8">
           <Image src={VynilUnfolded} alt="Sihin" className="2xl:w-full" />
         </div>
         <div className="mx-auto flex w-fit flex-col justify-center gap-x-8 p-8 md:flex-row">
@@ -62,7 +61,7 @@ export default async function CollabPage({
         </div>
       </div>
       <div className="flex flex-row justify-center bg-white py-16">
-        <Image src={LogoSihinW} alt="Sihin" className="size-96" />
+        <Image src={LogoSihinW} alt="Sihin" className="size-48 md:size-64 lg:size-80 xl:size-96" />
       </div>
       <div className="flex flex-row justify-center bg-white py-16">
         <Image src={Logo} alt="Sihin" className="" />
