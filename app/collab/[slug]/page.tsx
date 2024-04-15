@@ -34,8 +34,8 @@ export default async function CollabPage({
   const data: simplifiedCollab = await getData(params.slug);
   return (
     <>
-      <div className="sihin text-center">
-        <div className="pt-60 lg:pt-80  xl:pt-40">
+      <div className="sihin pb-20 pt-60 text-center lg:pt-80  xl:pt-40">
+        <div className="">
           <h2 className=" text-white">{data.name}</h2>
           <p className="mx-auto max-w-[360px] text-md md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] ">
             I had the privilege of crafting the artistic ensemble for the vinyl
@@ -53,7 +53,7 @@ export default async function CollabPage({
         <div className="px-0 py-4 md:py-8">
           <Image src={VynilUnfolded} alt="Sihin" className="2xl:w-full" />
         </div>
-        <div className="mx-auto flex w-fit flex-col justify-center gap-y-8 md:gap-y-0 gap-x-8 p-8 md:flex-row">
+        <div className="mx-auto flex w-fit flex-col justify-center gap-8 p-8 md:flex-row md:gap-y-0">
           <Image src={Int01} alt="Sihin" />
           <Image src={Int02} alt="Sihin" />
           <Image src={Int03} alt="Sihin" />
