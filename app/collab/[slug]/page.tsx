@@ -53,7 +53,7 @@ export default async function CollabPage({
         <div className="px-0 py-4 md:py-8">
           <Image src={VynilUnfolded} alt="Sihin" className="2xl:w-full" />
         </div>
-        <div className="mx-auto flex w-fit flex-col justify-center gap-x-8 p-8 md:flex-row">
+        <div className="mx-auto flex w-fit flex-col justify-center gap-y-8 md:gap-y-0 gap-x-8 p-8 md:flex-row">
           <Image src={Int01} alt="Sihin" />
           <Image src={Int02} alt="Sihin" />
           <Image src={Int03} alt="Sihin" />
