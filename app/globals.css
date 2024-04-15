@@ -53,6 +53,9 @@
       @apply text-[60px] font-medium uppercase;
     }
 
-  
+    /* Off White */
+    .gradient-background {
+      background: linear-gradient(to bottom, #2B2F3B, #010012 40%, #010010);
+  }
   }
 }
