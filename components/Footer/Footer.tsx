@@ -43,9 +43,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-row pt-4">
           <p
-            className={`${textColor} max-w-[200px] text-center text-[14px] leading-5 xl:max-w-[300px] xl:text-md xl:leading-6`}
+            className={`${textColor}  max-w-[200px] text-center text-[14px] leading-5 xl:max-w-[300px] xl:text-sm xl:leading-6`}
           >
-            By the way, my name is Sandamal. Welcome to my lands.
+            Welcome to my lands 
           </p>
         </div>
       </div>
