@@ -1,13 +1,13 @@
 import { simplifiedCollab } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import Image from "next/image";
-import Logo from "../../../public/images/logo.jpg";
 import LogoSihinW from "../../../public/images/LogoSihinW.jpg";
 import VynilUnfolded from "../../../public/images/VynilUnfolded.jpg";
 import Int01 from "../../../public/images/int01.jpg";
 import Int02 from "../../../public/images/int02.jpg";
 import Int03 from "../../../public/images/int03.jpg";
 import Int04 from "../../../public/images/int04.jpg";
+import Logo from "../../../public/images/logo.jpg";
 import Vynil from "../../../public/images/vynil.png";
 import VynilFront from "../../../public/images/vynil_front.jpg";
 
@@ -37,7 +37,7 @@ export default async function CollabPage({
       <div className="sihin text-center">
         <div className="pt-40">
           <h2 className=" text-white">{data.name}</h2>
-          <p className="px-60 text-md">
+          <p className="px-8 text-md md:px-12 lg:px-20 xl:px-60">
             I had the privilege of crafting the artistic ensemble for the vinyl
             cover of the metal band Sihin. From creating captivating
             illustrations to designing a striking logo, and meticulously
@@ -48,7 +48,7 @@ export default async function CollabPage({
         </div>
 
         <div className=" mx-auto flex  w-full flex-col gap-x-14 p-8 md:flex-row">
-          <Image src={VynilFront} alt="Sihin"  />
+          <Image src={VynilFront} alt="Sihin" />
           <Image src={Vynil} alt="Sihin" />
         </div>
         <div className="px-0">
