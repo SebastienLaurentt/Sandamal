@@ -37,7 +37,7 @@ export default async function CollabPage({
       <div className="sihin pb-20 pt-60 text-center lg:pt-80  xl:pt-40">
         <div className="">
           <h2 className=" text-white">{data.name}</h2>
-          <p className="mx-auto max-w-[360px] text-md md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] ">
+          <p className="mx-auto px-8 py-16 text-md md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] ">
             I had the privilege of crafting the artistic ensemble for the vinyl
             cover of the metal band Sihin. From creating captivating
             illustrations to designing a striking logo, and meticulously
@@ -46,14 +46,14 @@ export default async function CollabPage({
             Explore a glimpse of my work for this unique collaboration.
           </p>
         </div>
-        <div className="flex w-full flex-col gap-y-4 p-8 md:flex-row md:justify-center md:gap-x-8 md:gap-y-0 xl:md:gap-x-14">
+        <div className="flex w-full flex-col gap-y-12 px-8 py-16 md:flex-row md:justify-center md:gap-x-8 md:gap-y-0 xl:md:gap-x-14">
           <Image src={VynilFront} alt="Sihin" />
           <Image src={Vynil} alt="Sihin" />
         </div>
-        <div className="px-0 py-4 md:py-8">
+        <div className="px-0 py-16">
           <Image src={VynilUnfolded} alt="Sihin" className="2xl:w-full" />
         </div>
-        <div className="mx-auto flex w-fit flex-col justify-center gap-8 p-8 md:flex-row md:gap-y-0">
+        <div className="mx-auto flex w-fit flex-col justify-center gap-8 px-8 py-16 md:flex-row md:gap-y-0">
           <Image src={Int01} alt="Sihin" />
           <Image src={Int02} alt="Sihin" />
           <Image src={Int03} alt="Sihin" />
