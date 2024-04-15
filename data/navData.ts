@@ -29,11 +29,11 @@ const navData = [
     name: "About",
     burgerMenuName: "ABOUT",
   },
-  {
-    href: "/store",
-    name: "Store",
-    burgerMenuName: "STORE",
-  },
+  // {
+  //   href: "/store",
+  //   name: "Store",
+  //   burgerMenuName: "STORE",
+  // },
 ];
 
 export default navData;
