@@ -42,8 +42,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        <BackToTop />
-        <Footer />
       </Section>
     </main>
   );
