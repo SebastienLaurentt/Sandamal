@@ -1,5 +1,3 @@
-import BackToTop from "@/components/BackToTop/BackToTop";
-import Footer from "@/components/Footer/Footer";
 import Section from "@/components/Section/Section";
 import aboutImg from "@/public/images/about.jpg";
 import Image from "next/image";
@@ -15,7 +13,7 @@ const About = () => {
             className="xl:w-1/2 xl:p-16 2xl:px-32"
           />
           <div>
-            <h2>Quick Bio</h2>
+            <h2>Who am i ?</h2>
             <div className="flex flex-col gap-y-2 xl:max-w-[600px]">
               <p>My name is Julien Sandamal Perez </p>
               <p>
