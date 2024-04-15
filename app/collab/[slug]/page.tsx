@@ -35,7 +35,7 @@ export default async function CollabPage({
   const data: simplifiedCollab = await getData(params.slug);
   return (
     <>
-      <Section classname="gradient-background text-center">
+      <Section classname="sihin text-center">
         <h2 className=" text-white">{data.name}</h2>
         <p className="text-md text-sihinText">
           I had the privilege of crafting the artistic ensemble for the vinyl

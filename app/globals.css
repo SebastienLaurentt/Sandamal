@@ -54,8 +54,9 @@
     }
 
     /* Off White */
-    .gradient-background {
+    .sihin {
       background: linear-gradient(to bottom, #2B2F3B, #010012 40%, #010010);
+      color: #BFDBC0;
   }
   }
 }

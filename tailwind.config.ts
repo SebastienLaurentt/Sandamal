@@ -73,8 +73,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sihin:'#2B2F3B',
-        sihinText:'#BFDBC0',
       },
       borderRadius: {
         lg: "var(--radius)",
