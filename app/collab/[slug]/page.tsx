@@ -37,7 +37,7 @@ export default async function CollabPage({
       <div className="sihin text-center">
         <div className="pt-60  xl:pt-40">
           <h2 className=" text-white">{data.name}</h2>
-          <p className="px-8 text-md md:px-12 lg:px-20 xl:px-60">
+          <p className="mx-auto max-w-[360px] text-md md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] ">
             I had the privilege of crafting the artistic ensemble for the vinyl
             cover of the metal band Sihin. From creating captivating
             illustrations to designing a striking logo, and meticulously
@@ -61,7 +61,11 @@ export default async function CollabPage({
         </div>
       </div>
       <div className="flex flex-row justify-center bg-white py-16">
-        <Image src={LogoSihinW} alt="Sihin" className="size-48 md:size-64 lg:size-80 xl:size-96" />
+        <Image
+          src={LogoSihinW}
+          alt="Sihin"
+          className="size-48 md:size-64 lg:size-80 xl:size-96"
+        />
       </div>
       <div className="flex flex-row justify-center bg-white py-16">
         <Image src={Logo} alt="Sihin" className="" />
