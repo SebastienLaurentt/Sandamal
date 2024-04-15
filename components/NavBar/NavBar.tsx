@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
 
         <nav className="hidden xl:block ">
-          <ul className="gap-4 uppercase xl:flex xl:font-medium">
+          <ul className="gap-8 uppercase xl:flex xl:font-medium">
             {navData.map((link, idx) => (
               <li key={idx}>
                 <Link
