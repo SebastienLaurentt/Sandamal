@@ -46,7 +46,7 @@ export default async function CollabPage({
             Explore a glimpse of my work for this unique collaboration.
           </p>
         </div>
-        <div className="flex w-full flex-col gap-y-12 px-8 py-16 md:flex-row md:justify-center md:gap-x-8 md:gap-y-0 lg:py-24 xl:md:gap-x-14">
+        <div className="flex w-full flex-col gap-y-12 px-8 xl:px-16 py-16 md:flex-row md:justify-center md:gap-x-8 md:gap-y-0 lg:py-24 xl:md:gap-x-14">
           <Image src={VynilFront} alt="Sihin" />
           <Image src={Vynil} alt="Sihin" />
         </div>
@@ -64,7 +64,7 @@ export default async function CollabPage({
         <Image
           src={LogoSihinW}
           alt="Sihin"
-          className="size-36 md:size-48 lg:size-64 xl:size-96"
+          className="size-36 md:size-48 lg:size-64 xl:size-80"
         />
       </div>
       <div className="flex flex-row justify-center bg-white pb-16">
