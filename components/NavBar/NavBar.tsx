@@ -19,13 +19,14 @@ export default function Navbar() {
   const logoColor = pathname === "/" || pathname.startsWith("/collab/") ? "white" : "black";
 
   useEffect(() => {
-
-    gsap.fromTo(
-      "#header",
-      { opacity: 0 },
-      { opacity: 1, duration: 2, delay: 0.5}
-    );
-  }, []);
+    if (pathname === "/") {
+      gsap.fromTo(
+        "#header",
+        { opacity: 0 },
+        { opacity: 1, duration: 2, delay: 0.5}
+      );
+    }
+  }, [pathname]);
 
 
   return (

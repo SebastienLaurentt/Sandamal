@@ -27,12 +27,14 @@ const Footer = () => {
       : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
   useEffect(() => {
+    if (pathname === "/") {
     gsap.fromTo(
       "#footer",
       { opacity: 0 },
       { opacity: 1, duration: 2, delay: 1 }
     );
-  }, []);
+  }
+  }, [pathname]);
 
   return (
     <footer id="footer" className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}>
