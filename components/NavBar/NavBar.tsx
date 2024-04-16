@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import navData from "../../data/navData";
+import { gsap } from "gsap";
 
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
@@ -17,8 +18,18 @@ export default function Navbar() {
     pathname === "/" || pathname.startsWith("/collab/") ? "text-primary-foreground" : "text-foreground";
   const logoColor = pathname === "/" || pathname.startsWith("/collab/") ? "white" : "black";
 
+  useEffect(() => {
+
+    gsap.fromTo(
+      "#header",
+      { opacity: 0 },
+      { opacity: 1, duration: 2, delay: 0.5}
+    );
+  }, []);
+
+
   return (
-    <header className={`${headerPosition} z-10 w-full`}>
+    <header id="header" className={`${headerPosition} z-10 w-full`}>
       <div
         className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
       >
