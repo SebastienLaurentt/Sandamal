@@ -1,8 +1,9 @@
 import { Instagram, X } from "lucide-react";
 import Link from "next/link";
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import navData from "../../data/navData";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
+import { gsap } from "gsap";
 
 interface IBurgerMenu {
   isOpen: boolean;
@@ -10,6 +11,8 @@ interface IBurgerMenu {
 }
 
 export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
+  const xButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     // Désactiver le défilement de la page principale lorsque le menu est ouvert
     if (isOpen) {
@@ -24,9 +27,20 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      gsap.fromTo(
+        xButtonRef.current,
+        { opacity: 0, rotation: 0 },
+        { opacity: 1, rotation: 360, duration: 1, delay: 0.2 }
+      );
+    }
+  }, [isOpen]);
+
   return (
     <>
       <button
+        
         className="font-medium uppercase tracking-wider  lg:text-xl"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
@@ -56,6 +70,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           </span>
 
           <button
+            ref={xButtonRef}
             onClick={() => setIsOpen(false)}
             aria-label="Fermer le menu mobile"
           >
