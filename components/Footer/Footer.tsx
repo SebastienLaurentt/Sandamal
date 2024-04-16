@@ -1,8 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { gsap } from "gsap";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -24,8 +26,16 @@ const Footer = () => {
       ? "xl:hover:bg-transparent xl:hover:text-white"
       : "xl:hover:bg-background xl:hover:text-foreground xl:hover:border-2 xl:hover:border-black";
 
+  useEffect(() => {
+    gsap.fromTo(
+      "#footer",
+      { opacity: 0 },
+      { opacity: 1, duration: 2, delay: 1 }
+    );
+  }, []);
+
   return (
-    <footer className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}>
+    <footer id="footer" className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}>
       <div className="flex flex-col items-center">
         <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch
@@ -45,7 +55,7 @@ const Footer = () => {
           <p
             className={`${textColor}  max-w-[200px] text-center text-[14px] leading-5 xl:max-w-[300px] xl:text-sm xl:leading-6`}
           >
-            Welcome to my lands 
+            Welcome to my lands
           </p>
         </div>
       </div>
