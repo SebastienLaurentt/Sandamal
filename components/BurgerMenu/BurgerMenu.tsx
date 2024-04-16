@@ -1,9 +1,9 @@
+import { gsap } from "gsap";
 import { Instagram, X } from "lucide-react";
 import Link from "next/link";
-import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import navData from "../../data/navData";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
-import { gsap } from "gsap";
 
 interface IBurgerMenu {
   isOpen: boolean;
@@ -11,8 +11,6 @@ interface IBurgerMenu {
 }
 
 export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
-  const xButtonRef = useRef<HTMLButtonElement>(null);
-
   useEffect(() => {
     // Désactiver le défilement de la page principale lorsque le menu est ouvert
     if (isOpen) {
@@ -29,10 +27,32 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
 
   useEffect(() => {
     if (isOpen) {
+      // Closing Button Rotation Animation
       gsap.fromTo(
-        xButtonRef.current,
-        { opacity: 0, rotation: 0 },
-        { opacity: 1, rotation: 360, duration: 1, delay: 0.2 }
+        "#closingButton",
+        { rotation: 0 },
+        { rotation: 360, duration: 1 }
+      );
+
+      // Header Opacity Animation
+      gsap.fromTo(
+        "#headerBurgerMenu",
+        { opacity: 0 },
+        { opacity: 1, duration: 1 }
+      );
+
+      // Nav Opacity and Y translation Animation
+      gsap.fromTo(
+        "#NavBurgerMenu",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1 }
+      );
+
+      // Instagram Button Opacity and Y translation Animation
+      gsap.fromTo(
+        "#InstagramBurgerMenu",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1 }
       );
     }
   }, [isOpen]);
@@ -40,7 +60,6 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
   return (
     <>
       <button
-        
         className="font-medium uppercase tracking-wider  lg:text-xl"
         onClick={() => setIsOpen(true)}
         aria-label="Ouvrir le menu mobile"
@@ -53,7 +72,10 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           isOpen ? "opacity-100" : "hidden opacity-0"
         }`}
       >
-        <div className="flex flex-col items-center justify-center">
+        <div
+          id="headerBurgerMenu"
+          className="flex flex-col items-center justify-center"
+        >
           <Link href="/">
             <SandamalIcon fillColor="black" />
           </Link>
@@ -70,7 +92,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           </span>
 
           <button
-            ref={xButtonRef}
+            id="closingButton"
             onClick={() => setIsOpen(false)}
             aria-label="Fermer le menu mobile"
           >
@@ -78,7 +100,10 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
           </button>
         </div>
 
-        <ul className=" flex flex-col gap-4 p-4 text-md font-extralight tracking-[.5em] md:text-lg lg:gap-8 lg:text-xl">
+        <ul
+          id="NavBurgerMenu"
+          className=" flex flex-col gap-4 p-4 text-md font-extralight tracking-[.5em] md:text-lg lg:gap-8 lg:text-xl"
+        >
           {navData.map((link) => (
             <li key={link.name}>
               <Link href={link.href} onClick={() => setIsOpen(false)}>
@@ -89,6 +114,7 @@ export default function BurgerMenu({ isOpen, setIsOpen }: IBurgerMenu) {
         </ul>
 
         <button
+          id="InstagramBurgerMenu"
           className=" flex w-full justify-center"
           onClick={() => setIsOpen(false)}
           aria-label="Allez à la page Instagram de Sandamal"
