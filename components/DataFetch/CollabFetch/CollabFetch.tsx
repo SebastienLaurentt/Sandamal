@@ -34,16 +34,13 @@ export default async function CollabFetch() {
                 height={500}
               />
             </div>
-            <div className="flex flex-col uppercase ">
-              <span className="text-2xl font-semibold leading-6 py-2">
-                {collab.name}
-              </span>
-              <span className="leading-4">
-              {collab.shortDescription}
-              </span>
-
-            </div>
           </Link>
+          <div className="flex flex-col uppercase ">
+            <span className="py-2 text-2xl font-semibold leading-6">
+              {collab.name}
+            </span>
+            <span className="leading-4">{collab.shortDescription}</span>
+          </div>
         </div>
       ))}
     </div>
