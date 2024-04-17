@@ -22,7 +22,7 @@ export async function sendEmail(prevState: State, formData: FormData) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: 'Sandamal Website <onboarding@resend.dev>',
-      to: 'slaurent.dev@gmail.com',
+      to: 'perez.julien.sandamal@gmail.com',
       subject: `Nouvelle inscription depuis ${email}`,
       text:  `Nouvelle inscription depuis ${email}`
     })
