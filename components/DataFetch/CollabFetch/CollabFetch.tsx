@@ -7,6 +7,7 @@ async function getData() {
   const query = `*[_type == "collab"] {
     _id,
     name,
+    shortDescription,
     "slug": slug.current,
     "imageUrl": collabMainImage.asset->url
   }`;
@@ -32,6 +33,15 @@ export default async function CollabFetch() {
                 width={500}
                 height={500}
               />
+            </div>
+            <div>
+              <span>
+                {collab.name}
+              </span>
+              <span>
+              {collab.shortDescription}
+              </span>
+
             </div>
           </Link>
         </div>
