@@ -23,7 +23,7 @@ function SectionBg({
       className={` ${className} ${isMinHeightScreen} relative w-full bg-cover bg-center px-6 md:px-10 xl:px-16`}
       style={{
         backgroundImage: bg
-          ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${bg.src})`
+          ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${bg.src})`
           : "none",
       }}
     >
