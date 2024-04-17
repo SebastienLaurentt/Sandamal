@@ -104,7 +104,7 @@ const Footer = () => {
       return () => clearTimeout(timer);
     }
     if (sendEmailState.error) {
-      setFormFeedback("Erreur lors de l'envoi de l'email.");
+      setFormFeedback("Erreur lors de l'envoi de l'email");
     }
   }, [sendEmailState]);
 
