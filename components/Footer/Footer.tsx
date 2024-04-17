@@ -31,7 +31,7 @@ const Footer = () => {
     gsap.fromTo(
       "#footer",
       { opacity: 0 },
-      { opacity: 1, duration: 2, delay: 1 }
+      { opacity: 1, duration: 2, delay: 0.5 }
     );
   }
   }, [pathname]);
