@@ -5,7 +5,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <main>
-      <Section>
+      <Section paddingHorizontal={true}>
         <div className="my-8 flex flex-col items-center xl:flex-row xl:gap-x-4 xl:p-8 ">
           <Image
             src={aboutImg}
