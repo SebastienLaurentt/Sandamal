@@ -4,7 +4,7 @@ import Section from "@/components/Section/Section";
 const Draw = () => {
   return (
     <main>
-      <Section marginTop={true} marginBottom={true}>
+      <Section marginTop={false} marginBottom={false}>
         <DrawFetch />
       </Section>
     </main>
