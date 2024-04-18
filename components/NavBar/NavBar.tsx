@@ -1,10 +1,10 @@
 "use client";
 
+import { gsap } from "gsap";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import navData from "../../data/navData";
-import { gsap } from "gsap";
 
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import SandamalIcon from "../SandamalIcon/SandamalIcon";
@@ -13,26 +13,34 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const headerPosition = pathname === "/" || pathname.startsWith("/collab/") ? "absolute" : "";
+  const headerPosition =
+    pathname === "/" || pathname.startsWith("/collab/") ? "absolute" : "";
+  const headerBgColor =
+    pathname === "/" || pathname.startsWith("/collab/") ? "" : "bg-black";
   const headerTextColor =
-    pathname === "/" || pathname.startsWith("/collab/") ? "text-primary-foreground" : "text-foreground";
-  const logoColor = pathname === "/" || pathname.startsWith("/collab/") ? "white" : "black";
+    pathname === "/" || pathname.startsWith("/collab/")
+      ? "text-primary-foreground"
+      : "text-primary-foreground";
+  const logoColor =
+    pathname === "/" || pathname.startsWith("/collab/") ? "white" : "white";
 
   useEffect(() => {
     if (pathname === "/") {
       gsap.fromTo(
         "#header",
         { opacity: 0 },
-        { opacity: 1, duration: 2, delay: 0.5}
+        { opacity: 1, duration: 2, delay: 0.5 }
       );
     }
   }, [pathname]);
 
-
   return (
-    <header id="header" className={`${headerPosition} z-10 w-full`}>
+    <header
+      id="header"
+      className={`${headerPosition} ${headerBgColor} z-10 w-full`}
+    >
       <div
-        className={`mt-12 flex flex-col items-center ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
+        className={`flex flex-col items-center pb-8 pt-12  ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
       >
         <div className="flex flex-col items-center gap-x-6 xl:flex-row">
           <Link href="/">
