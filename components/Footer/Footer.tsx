@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
+import React, { useEffect, useState } from "react";
+import { useFormState } from "react-dom";
 import { sendEmail } from "@/app/src/actions";
 import { gsap } from "gsap";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useFormState } from "react-dom";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -41,7 +41,8 @@ const Footer = () => {
     email: false,
   });
 
-  const [formFeedback, setFormFeedback] = useState("");
+  const [buttonText, setButtonText] = useState("FOLLOW ME"); // Texte initial du bouton
+  const [confirmationMessage, setConfirmationMessage] = useState("");
 
   const handleInputChange = (event: any) => {
     const { name, value } = event.target;
@@ -78,6 +79,7 @@ const Footer = () => {
 
       // Send email if all fields are filled
       sendEmailAction(formDataObject);
+      setButtonText("SENDING..."); // Mettre à jour le texte du bouton lors de l'envoi
     }
   };
 
@@ -96,15 +98,16 @@ const Footer = () => {
       setFormData({
         email: "",
       });
-      setFormFeedback("Merci pour votre message ! ");
-      // Clear feedback after 5 seconds
+      setButtonText("FOLLOW ME"); // Réinitialiser le texte du bouton après l'envoi
+      setConfirmationMessage("THANKS!"); // Afficher le message de confirmation
+      // Effacer le message de confirmation après 2 secondes
       const timer = setTimeout(() => {
-        setFormFeedback("");
-      }, 5000);
+        setConfirmationMessage("");
+      }, 2000);
       return () => clearTimeout(timer);
     }
     if (sendEmailState.error) {
-      setFormFeedback("Erreur lors de l'envoi de l'email");
+      setButtonText("Error"); // Mettre à jour le texte du bouton en cas d'erreur
     }
   }, [sendEmailState]);
 
@@ -114,7 +117,7 @@ const Footer = () => {
       className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}
     >
       <div className="flex flex-col items-center">
-        <span className={` text-md uppercase ${textColor} lg:text-3xl`}>
+        <span className={`text-md uppercase ${textColor} lg:text-3xl`}>
           Keep in touch
         </span>
         <form
@@ -136,20 +139,8 @@ const Footer = () => {
               aria-label="Envoyer le formulaire"
               className={`mt-4 w-40 ${followMeBgColor} ${followMeTextColor} ${followMeHover}`}
             >
-              FOLLOW ME
+              {confirmationMessage ? confirmationMessage : buttonText}
             </Button>
-            {/* If no formErrors and submission */}
-            {formFeedback && (
-              <p
-                className={`ml-3 text-sm ${
-                  sendEmailState.success
-                    ? "font-bold text-green-600"
-                    : "font-bold text-red-600"
-                }`}
-              >
-                {formFeedback}
-              </p>
-            )}
           </div>
         </form>
         <div className="flex flex-row pt-4">
