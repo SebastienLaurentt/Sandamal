@@ -42,7 +42,7 @@ export default async function CollabFetch() {
                 width={500}
                 height={500}
               />
-              <div className="md:flex-row absolute bottom-8 left-8 flex size-full flex-col items-start justify-end gap-y-2 text-white md:left-14 md:top-0 md:items-center md:justify-center md:gap-x-2 ">
+              <div className="lg:left-[440px] xl:lg:left-[640px] 2xl:lg:left-[900px] absolute bottom-8 left-8 flex h-full w-fit flex-col items-start justify-end gap-y-2 text-white md:left-80 md:top-0  md:flex-row md:items-center md:justify-center md:gap-x-2 ">
                 <span className="text-3xl font-semibold uppercase leading-8">
                   {collab.name}
                 </span>
