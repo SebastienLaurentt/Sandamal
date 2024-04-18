@@ -19,8 +19,13 @@ export default {
       title: 'Description (Page)',
     },
     {
-      name: 'collabMainImage',
-      title: 'Main Image',
+      name: 'mainImageMobile',
+      title: 'Main Image Mobile',
+      type: 'image',
+    },
+    {
+      name: 'mainImageTab',
+      title: 'Main Image Tablette & Desktop',
       type: 'image',
     },
     {
