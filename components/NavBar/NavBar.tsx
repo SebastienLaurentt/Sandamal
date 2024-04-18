@@ -16,13 +16,13 @@ export default function Navbar() {
   const headerPosition =
     pathname === "/" || pathname.startsWith("/collab/") ? "absolute" : "";
   const headerBgColor =
-    pathname === "/" || pathname.startsWith("/collab/") ? "" : "bg-black";
+    pathname === "/" || pathname.startsWith("/collab/") ? "" : "";
   const headerTextColor =
     pathname === "/" || pathname.startsWith("/collab/")
       ? "text-primary-foreground"
-      : "text-primary-foreground";
+      : "text-foreground";
   const logoColor =
-    pathname === "/" || pathname.startsWith("/collab/") ? "white" : "white";
+    pathname === "/" || pathname.startsWith("/collab/") ? "white" : "black";
 
   useEffect(() => {
     if (pathname === "/") {
