@@ -4,7 +4,7 @@ import Section from "@/components/Section/Section";
 const Collab = () => {
   return (
     <main>
-      <Section marginTop={true} marginBottom={true}>
+      <Section marginTop={false} marginBottom={false}>
         <CollabFetch />
       </Section>
     </main>
