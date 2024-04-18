@@ -20,7 +20,7 @@ async function getData() {
 export default async function CollabFetch() {
   const data: simplifiedCollab[] = await getData();
   return (
-    <div className="  flex flex-col md:grid md:grid-cols-2 xl:grid-cols-5">
+    <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3">
       {data.map((collab: any, index: number) => (
         <div key={index}>
           <Link href={`/collab/${collab.slug}`}>
@@ -33,7 +33,7 @@ export default async function CollabFetch() {
                 width={500}
                 height={500}
               />
-              <div className="absolute bottom-8 left-8 flex w-fit flex-col gap-y-2 uppercase text-white ">
+              <div className="absolute bottom-8 left-8 flex w-fit flex-col gap-y-2 uppercase text-white lg:bottom-12 lg:left-12 ">
                 <span className="text-3xl font-semibold leading-8">
                   {collab.name}
                 </span>
