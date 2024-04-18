@@ -117,7 +117,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className={`${footerPosition} mx-auto w-full p-8 lg:p-12`}
+      className={`${footerPosition} mx-auto w-full pb-8`}
     >
       <div className="flex flex-col items-center">
         <span className={`text-md uppercase ${textColor} lg:text-3xl`}>
