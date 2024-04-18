@@ -24,12 +24,12 @@ export default async function CollabFetch() {
     <div className="flex flex-col ">
       {data.map((collab: any, index: number) => (
         <div key={index}>
-          <Link href={`/collab/${collab.slug}`}>
+          <Link href={`/collab/${collab.slug}`} className="text-white">
             <div className="relative -z-10 ">
               <Image
                 src={collab.imageUrlMobile}
                 alt="Great Photo"
-                className=" size-full object-cover object-center md:hidden"
+                className=" size-full object-cover object-center md:hidden "
                 priority
                 width={500}
                 height={500}
@@ -37,16 +37,16 @@ export default async function CollabFetch() {
               <Image
                 src={collab.imageUrlTab}
                 alt="Great Photo"
-                className="hidden size-full object-cover object-center md:block"
+                className="hidden size-full object-cover object-center  md:block"
                 priority
                 width={500}
                 height={500}
               />
-              <div className="lg:left-[440px] xl:lg:left-[640px] 2xl:lg:left-[900px] absolute bottom-8 left-8 flex h-full w-fit flex-col items-start justify-end gap-y-2 text-white md:left-80 md:top-0  md:flex-row md:items-center md:justify-center md:gap-x-2 ">
+              <div className="absolute bottom-8 left-8 flex size-full flex-col items-start justify-end gap-y-2 md:left-0 md:top-0 md:flex-row md:items-center md:justify-center md:gap-x-2 ">
                 <span className="text-3xl font-semibold uppercase leading-8">
                   {collab.name}
                 </span>
-                <span className="text-md leading-5 md:max-w-[160px]">
+                <span className="text-md leading-5 md:max-w-[120px]">
                   {collab.shortDescription}
                 </span>
               </div>
