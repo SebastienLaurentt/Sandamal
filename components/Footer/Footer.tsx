@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from "react";
-import { useFormState } from "react-dom";
 import { sendEmail } from "@/app/src/actions";
 import { gsap } from "gsap";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useFormState } from "react-dom";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -37,9 +37,8 @@ const Footer = () => {
     email: "",
   });
 
-  const [formErrors, setFormErrors] = useState({
-    email: false,
-  });
+  const [emailError, setEmailError] = useState(false); // Suivre si une erreur s'est produite lors de la soumission du formulaire
+  const [inputFocused, setInputFocused] = useState(false); // Suivre si l'input est sélectionné
 
   const [buttonText, setButtonText] = useState("FOLLOW ME"); // Texte initial du bouton
   const [confirmationMessage, setConfirmationMessage] = useState("");
@@ -51,10 +50,16 @@ const Footer = () => {
       [name]: value,
     });
     // Clear error message if field is filled
-    setFormErrors({
-      ...formErrors,
-      [name]: false,
-    });
+    setEmailError(false);
+  };
+
+  const handleInputFocus = () => {
+    setInputFocused(true); 
+    setEmailError(false);
+  };
+
+  const handleInputBlur = () => {
+    setInputFocused(false); 
   };
 
   const handleSubmit = (event: any) => {
@@ -63,10 +68,7 @@ const Footer = () => {
     // Check if all fields are filled
     Object.entries(formData).forEach(([key, value]) => {
       if (!value.trim()) {
-        setFormErrors((prevErrors) => ({
-          ...prevErrors,
-          [key]: true,
-        }));
+        setEmailError(true); 
         hasErrors = true;
       }
     });
@@ -79,7 +81,7 @@ const Footer = () => {
 
       // Send email if all fields are filled
       sendEmailAction(formDataObject);
-      setButtonText("SENDING..."); // Mettre à jour le texte du bouton lors de l'envoi
+      setButtonText("SENDING..."); 
     }
   };
 
@@ -98,16 +100,17 @@ const Footer = () => {
       setFormData({
         email: "",
       });
-      setButtonText("FOLLOW ME"); // Réinitialiser le texte du bouton après l'envoi
-      setConfirmationMessage("THANKS!"); // Afficher le message de confirmation
-      // Effacer le message de confirmation après 2 secondes
+      setButtonText("FOLLOW ME"); 
+      setConfirmationMessage("THANKS!"); 
+    
+      // Clear confirmation message after 2 seconds
       const timer = setTimeout(() => {
         setConfirmationMessage("");
       }, 2000);
       return () => clearTimeout(timer);
     }
     if (sendEmailState.error) {
-      setButtonText("Error"); // Mettre à jour le texte du bouton en cas d'erreur
+      setButtonText("Error"); 
     }
   }, [sendEmailState]);
 
@@ -126,12 +129,18 @@ const Footer = () => {
         >
           <Input
             type="email"
-            placeholder="Email"
+            placeholder={emailError && !inputFocused ? "Enter Your Email" : "Email"} // Utiliser "Your email" seulement si l'erreur s'est produite et que l'input n'est pas sélectionné
             id="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor} ${textColor} ${emailPlaceholderTextColor} bg-transparent`}
+            onFocus={handleInputFocus} 
+            onBlur={handleInputBlur} 
+            className={`mx-auto mt-4 w-40 border-2 ${emailButtonBorderColor} ${textColor} ${emailPlaceholderTextColor} bg-transparent ${
+              emailError && !inputFocused
+                ? "border-red-500 font-semibold placeholder:text-red-500"
+                : ""
+            }`} 
           />
           <div className="flex items-center">
             <Button
