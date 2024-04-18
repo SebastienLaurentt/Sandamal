@@ -12,7 +12,7 @@ async function getData() {
 export default async function SketchFetch() {
   const data = await getData();
   return (
-    <div className="flex flex-col gap-y-4 md:grid md:grid-cols-3 md:gap-2 lg:gap-4 xl:grid-cols-5">
+    <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3">
       {data.map((sketch: any, index: number) => (
         <div key={index}>
           <div>
