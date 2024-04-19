@@ -27,7 +27,7 @@ export default async function CollabFetch() {
         <div key={index} className="group relative">
           <Link
             href={`/collab/${collab.slug}`}
-            className=" md:text-white/0 text-white md:group-hover:text-white"
+            className=" text-white md:text-white/0 md:group-hover:text-white"
           >
             <div className="relative -z-10">
               <Image
