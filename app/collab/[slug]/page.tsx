@@ -1,15 +1,15 @@
 import { simplifiedCollab } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import Image from "next/image";
-import SihinCastle from "../../../public/images/Sihin_Castle.jpg";
-import SihinColumn from "../../../public/images/Sihin_Column.jpg";
-import SihinVisage from "../../../public/images/Sihin_Visage.jpg";
-import SihinWriting from "../../../public/images/Sihin_Writing.jpg";
-import VynilUnfolded from "../../../public/images/VynilUnfolded.jpg";
-import Vynil from "../../../public/images/vynil.png";
-import VynilFront from "../../../public/images/vynil_front.jpg";
-import LogoSihinW from "../../../public/images/LogoSihinW.jpg";
-import Logo from "../../../public/images/logo.jpg";
+import SihinCastle from "../../../public/images/Sihin/Castle.webp";
+import SihinColumn from "../../../public/images/Sihin/Column.webp";
+import LogoSihinW from "../../../public/images/Sihin/LogoW.jpg";
+import Logo from "../../../public/images/Sihin/LogoWB.jpg";
+import SihinVisage from "../../../public/images/Sihin/Visage.webp";
+import Vynil from "../../../public/images/Sihin/Vynil.png";
+import VynilFront from "../../../public/images/Sihin/VynilFront.jpg";
+import VynilUnfolded from "../../../public/images/Sihin/VynilUnfolded.webp";
+import SihinWriting from "../../../public/images/Sihin/Writing.webp";
 
 async function getData(slug: string) {
   const query = `*[_type == "collab" && slug.current == "${slug}"][0] {
@@ -61,18 +61,18 @@ export default async function CollabPage({
         </div> */}
       </div>
       <div>
-      <div className="">
+        <div className="">
           <Image src={SihinColumn} alt="Sihin" className="2xl:w-full" />
         </div>
         <div className="">
           <Image src={SihinVisage} alt="Sihin" className="2xl:w-full" />
         </div>
         <div className="flex flex-row">
-          <div className="">
-            <Image src={SihinCastle} alt="Sihin" className="2xl:w-full" />
+          <div className="w-1/2">
+            <Image src={SihinCastle} alt="Sihin" />
           </div>
-          <div className="">
-            <Image src={SihinWriting} alt="Sihin" className="2xl:w-full" />
+          <div className="w-1/2">
+            <Image src={SihinWriting} alt="Sihin" />
           </div>
         </div>
       </div>
