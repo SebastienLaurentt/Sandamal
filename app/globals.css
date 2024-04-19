@@ -50,7 +50,7 @@
     }
 
     h2 {
-      @apply text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium uppercase;
+      @apply text-6xl leading-[60px] md:leading-[64px] lg:leading-[68px] xl:leading-[72px] md:text-7xl lg:text-8xl xl:text-9xl font-medium uppercase my-2 lg:my-4;
     }
 
     /* Off White */
