@@ -25,6 +25,7 @@ function SectionBg({
         backgroundImage: bg
           ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${bg.src})`
           : "none",
+          height: "100vh",
       }}
     >
     </section>

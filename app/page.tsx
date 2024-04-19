@@ -4,7 +4,7 @@ import imgHome from "@/public/images/HomePage2.png";
 export default function Home() {
   return (
     <main className="flex h-screen items-end justify-center ">
-      <SectionBg bg={imgHome} minHeightScreen={true}/>
+      <SectionBg bg={imgHome} minHeightScreen={false}/>
       {/* <video
         preload="yes"
         autoPlay
