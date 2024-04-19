@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 interface SectionProps {
   id?: string;
   className?: string;
-  minHeightScreen: boolean;
+  minHeightScreen?: boolean;
   bg?: StaticImageData;
 }
 
@@ -15,7 +15,7 @@ function SectionBg({
 }: SectionProps) {
   const isMinHeightScreen = minHeightScreen
     ? "min-h-screen"
-    : "min-h-[calc(100vh/1.3)]";
+    : "";
 
   return (
     <section
