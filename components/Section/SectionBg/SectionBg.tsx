@@ -14,7 +14,7 @@ function SectionBg({
   bg,
 }: SectionProps) {
   const isMinHeightScreen = minHeightScreen
-    ? "h-screen"
+    ? "h-screen md:min-h-screen"
     : "";
 
   return (
