@@ -43,8 +43,8 @@ export default function Navbar() {
         className={`flex flex-col items-center py-12  ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
       >
         <div className="flex flex-col items-center gap-x-6 xl:flex-row">
-          <Link href="/">
-            <SandamalIcon fillColor={logoColor} />
+          <Link href="/" aria-label="Home Link">
+            <SandamalIcon fillColor={logoColor}  />
           </Link>
 
           <span className="my-3 text-3xl lg:text-6xl xl:my-0 xl:text-3xl">
