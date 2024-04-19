@@ -9,7 +9,7 @@ import VynilUnfolded from "../../../public/images/VynilUnfolded.jpg";
 import Vynil from "../../../public/images/vynil.png";
 import VynilFront from "../../../public/images/vynil_front.jpg";
 import LogoSihinW from "../../../public/images/LogoSihinW.jpg";
-import Logo from "../../../public/images/Logo.jpg";
+import Logo from "../../../public/images/logo.jpg";
 
 async function getData(slug: string) {
   const query = `*[_type == "collab" && slug.current == "${slug}"][0] {
