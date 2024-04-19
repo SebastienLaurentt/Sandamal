@@ -17,10 +17,9 @@ const BackToTop = () => {
   };
 
   return (
-    <div className={`${backToTopVisibility} flex flex-row justify-center p-8`}>
+    <div className={`${backToTopVisibility} flex flex-row justify-center py-8`}>
       <Button
         variant={"backToTop"}
-        className="uppercase text-tertiary-foreground"
         onClick={scrollToTop}
         aria-label="Retourner en haut de la page"
       >
