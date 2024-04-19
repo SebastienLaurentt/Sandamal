@@ -6,7 +6,7 @@ const About = () => {
   return (
     <main>
       <Section paddingHorizontal={true}>
-        <div className="my-8 flex flex-col items-center lg:flex-row lg:gap-x-4 lg:p-2 xl:p-8 ">
+        <div className="my-8 flex flex-col items-center lg:flex-row lg:gap-x-4 lg:p-3 xl:p-8 ">
           <Image
             src={aboutImg}
             alt="About"
