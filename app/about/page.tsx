@@ -16,7 +16,7 @@ const About = () => {
             <h2>Who am i ?</h2>
             <div className="flex flex-col gap-y-2 xl:max-w-[600px]">
               <p>
-                Verily, I am Sandamal Perez, yet I beseech thee to address me as
+                Verily, I am Julien Sandamal Perez, yet I beseech thee to address me as
                 Sandamal, a name bestowed upon me akin to the &quot;Moon
                 Flower&quot;, a symbol of my origins.
               </p>
