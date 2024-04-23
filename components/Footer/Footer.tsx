@@ -1,17 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { sendEmail } from "@/app/src/actions";
 import { gsap } from "gsap";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
 const Footer = () => {
   const pathname = usePathname();
+  const [isLandscape, setIsLandscape] = useState(false);
 
-  const footerPosition = pathname === "/" ? "absolute bottom-0" : "";
+  const footerPosition = pathname === "/" ? `absolute  ${
+    isLandscape ? "-bottom-80" : "bottom-0"}` : "";
   const textColor =
     pathname === "/" ? "text-secondary-foreground" : "text-foreground";
   const emailButtonBorderColor =
@@ -37,10 +39,9 @@ const Footer = () => {
     email: "",
   });
 
-  const [emailError, setEmailError] = useState(false); // Suivre si une erreur s'est produite lors de la soumission du formulaire
-  const [inputFocused, setInputFocused] = useState(false); // Suivre si l'input est sélectionné
-
-  const [buttonText, setButtonText] = useState("FOLLOW ME"); // Texte initial du bouton
+  const [emailError, setEmailError] = useState(false);
+  const [inputFocused, setInputFocused] = useState(false);
+  const [buttonText, setButtonText] = useState("FOLLOW ME");
   const [confirmationMessage, setConfirmationMessage] = useState("");
 
   const handleInputChange = (event: any) => {
@@ -49,7 +50,6 @@ const Footer = () => {
       ...formData,
       [name]: value,
     });
-    // Clear error message if field is filled
     setEmailError(false);
   };
 
@@ -65,7 +65,6 @@ const Footer = () => {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     let hasErrors = false;
-    // Check if all fields are filled
     Object.entries(formData).forEach(([key, value]) => {
       if (!value.trim()) {
         setEmailError(true); 
@@ -73,13 +72,10 @@ const Footer = () => {
       }
     });
     if (!hasErrors) {
-      // Convert formData to FormData object
       const formDataObject = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
         formDataObject.append(key, value);
       });
-
-      // Send email if all fields are filled
       sendEmailAction(formDataObject);
       setButtonText("SENDING..."); 
     }
@@ -102,8 +98,6 @@ const Footer = () => {
       });
       setButtonText("FOLLOW ME"); 
       setConfirmationMessage("THANKS!"); 
-    
-      // Clear confirmation message after 2 seconds
       const timer = setTimeout(() => {
         setConfirmationMessage("");
       }, 2000);
@@ -113,6 +107,27 @@ const Footer = () => {
       setButtonText("Error"); 
     }
   }, [sendEmailState]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Vérifier la hauteur de l'écran et l'orientation
+      const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+      const height = window.innerHeight;
+
+      // Si la hauteur est inférieure à une certaine valeur et en mode paysage,
+      // définir isMinHeightScreen à true, sinon false
+      setIsLandscape(isLandscape && height < 500);
+    };
+
+    // Ajouter un écouteur d'événement pour détecter les changements de taille d'écran
+    window.addEventListener("resize", handleResize);
+
+    // Appel initial pour définir correctement l'état au chargement de la page
+    handleResize();
+
+    // Nettoyage de l'écouteur d'événement lors du démontage du composant
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <footer
@@ -129,7 +144,7 @@ const Footer = () => {
         >
           <Input
             type="email"
-            placeholder={emailError && !inputFocused ? "Enter Your Email" : "Email"} // Utiliser "Your email" seulement si l'erreur s'est produite et que l'input n'est pas sélectionné
+            placeholder={emailError && !inputFocused ? "Enter Your Email" : "Email"}
             id="email"
             name="email"
             value={formData.email}
