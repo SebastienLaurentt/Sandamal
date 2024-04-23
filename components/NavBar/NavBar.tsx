@@ -40,7 +40,7 @@ export default function Navbar() {
       className={`${headerPosition} ${headerBgColor} z-10 w-full`}
     >
       <div
-        className={`flex flex-col items-center py-12  ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:py-6`}
+        className={`flex flex-col items-center py-12  ${headerTextColor} xl:mx-auto xl:mt-0 xl:flex-row xl:justify-between xl:px-16 xl:max-w-[2000px] xl:py-6`}
       >
         <div className="flex flex-col items-center gap-x-6 xl:flex-row">
           <Link href="/" aria-label="Home Link">
